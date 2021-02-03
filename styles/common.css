@@ -21,11 +21,22 @@ header {
     align-items: center;
 }
 
+.page-title { font-weight: 400; font-size: 24px; width: 95%; margin: auto; background: rgba(118, 180, 102, 0.308); } /* margin: 25px; }*/
+
 /* Styles */
 .logo-container, .nav-links { display: flex; }
 .logo-container { flex: 1; }
-.logo { font-weight: 400; font-size: 50px; margin: 5px; }
+.logo { font-weight: 400; font-size: 40px; margin: 5px; }
 
 nav { flex: 2; }
 .nav-links { justify-content: space-around; list-style: none; }
 .nav-link { color: #5f5f79; font-size: 18px; text-decoration: none; }
+
+
+footer {
+    display: flex;
+    width: 80%;
+    margin: auto;
+
+    background: rgba(80, 80, 80, 0.5);
+}

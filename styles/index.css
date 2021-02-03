@@ -1,8 +1,11 @@
 .presentation-container {
     display: flex;
+
+    width: 95%;
+    height: 50vh;
+    margin: auto;
     
     background: rgba(150, 150, 255, 0.644);
-    /*color: blue;*/
 }
 
 .cv-container {
