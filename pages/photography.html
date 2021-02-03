@@ -10,9 +10,13 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./style.css" />
+        
+        <!-- Styles -->
+        <link rel="stylesheet" href="../styles/common.css" /> <!-- header & footer -->
+        <link rel="stylesheet" href="../styles/photography.css" /> <!-- page-specific styles -->
 
-        <title>Anatole Hernot — Home</title>
+        <!-- Page Title -->
+        <title>Anatole Hernot — Photography</title>
     </head>
 
 
@@ -31,10 +35,10 @@
             <!-- Navigation Bar -->
             <nav>
                 <ul class="nav-links">
-                    <li><a class="nav-link"><a href="index.html">Home</a></li>
-                    <li><a class="nav-link"><a href="photography.html">Photography</a></li>
-                    <li><a class="nav-link"><a href="#">Projects</a></li>
-                    <li><a class="nav-link"><a href="contact.html">Contact</a></li>
+                    <li><a class="nav-link"><a href="../index.html">Home</a></li>
+                    <li><a class="nav-link"><a href="./photography.html">Photography</a></li>
+                    <li><a class="nav-link"><a href="./projects.html">Projects</a></li>
+                    <li><a class="nav-link"><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
 
@@ -43,14 +47,14 @@
 
         <!-- Main Body -->
         <main>
+
             <section class="presentation">
                 <h4 class="page-title">Photography</h4>
             </section>
 
+            <!-- Instagram Feed (Powered by Curator.io) -->
             <section class="instagram-feed"></section>
-                <!-- Place <div> tag where you want the feed to appear -->
                 <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
-                <!-- The Javascript can be moved to the end of the html page before the </body> tag -->
                 <script type="text/javascript">
                     /* curator-feed-default-feed-layout */
                     (function(){
@@ -62,5 +66,15 @@
             </section>
 
         </main>
+
+
+        <!-- Footer -->
+        <footer>
+            <p class="footer-text">
+                Anatole Hernot, 2021
+            </p>
+        </footer>
+
     </body>
+
 </html>
