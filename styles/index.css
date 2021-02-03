@@ -1,0 +1,17 @@
+.presentation-container {
+    display: flex;
+    
+    background: rgba(150, 150, 255, 0.644);
+    /*color: blue;*/
+}
+
+.cv-container {
+    display: flex;
+
+    width: 30%;
+    margin: auto; /* center the container */
+    align-items: center;
+    
+    background:rgba(255, 150, 150, 0.644);
+    /*padding: 0px 0px 0px 0px;*/
+}
