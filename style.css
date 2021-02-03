@@ -1,0 +1,31 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/* Set fonts */
+body { font-family: 'Poppins', sans-serif; }
+button { font-family: 'Poppins', sans-serif; }
+
+
+/* Header style */
+header {
+    display: flex;
+    
+    width: 80%; /* add margins (reduce container width) */
+    height: 10vh;
+
+    margin: auto; /* center the container */
+    align-items: center;
+}
+
+/* Styles */
+.logo-container, .nav-links { display: flex; }
+.logo-container { flex: 1; }
+.logo { font-weight: 400; font-size: 50px; margin: 5px; }
+
+nav { flex: 2; }
+.nav-links { justify-content: space-around; list-style: none; }
+.nav-link { color: #5f5f79; font-size: 18px; text-decoration: none; }
