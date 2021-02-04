@@ -18,3 +18,16 @@
     background:rgba(255, 150, 150, 0.644);
     /*padding: 0px 0px 0px 0px;*/
 }
+
+.cv-download {
+    flex: 1;
+    width: 10%;
+    text-align: center;
+
+    color: #0000ff;
+    text-decoration: none;
+}
+
+.cv-img {
+    flex: 1;
+}
