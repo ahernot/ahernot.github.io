@@ -1,20 +1,17 @@
-.presentation { background:rgba(216, 216, 216, 0.644); }
-.presentation-container {
+/*.presentation { background:rgba(216, 216, 216, 0.644); }*/
+.presentation {
+    /*
     display: flex;
-    flex-direction: column; /* change main axis to be horizontal axis */
-
+    flex-direction: column;*/ /* change main axis to be horizontal axis */
+    /*
     width: 95%;
-    height: 50vh;
     margin: auto;
-    
+
     background: rgba(0, 0, 0, 0.329);
+    */
 }
-.presentation-text {
-    /*padding: 0px 100px 0px 0px;*/
-    width: 70%;
-    
-    border: 3px solid green;
-}
+
+
 .LI-profile-badge {
     align-self: flex-end; /* align right on main axis */
     
@@ -49,4 +46,10 @@
 
 .cv-img {
     flex: 1;
+}
+
+
+
+.row, .col-xs-6, .col-xs-12 {
+    border: 3px solid green;
 }
