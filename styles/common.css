@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+/* Reduce size of main body */
+main {
+    width: 90%;
+    margin: auto;
+    padding: 50px 0px 0px 0px;
+}
+
 
 /* Set fonts */
 body { font-family: 'Poppins', sans-serif; }
@@ -14,11 +21,13 @@ button { font-family: 'Poppins', sans-serif; }
 header {
     display: flex;
     
-    width: 80%; /* add margins (reduce container width) */
+    width: 90%; /* add margins (reduce container width) */
     height: 10vh;
 
     margin: auto; /* center the container */
     align-items: center;
+
+    background: rgba(0, 0, 0, 0.082);
 }
 
 /* Page Title */
@@ -58,7 +67,7 @@ nav { flex: 2; }
 /* Footer style */
 footer {
     display: flex;
-    width: 80%;
+    width: 90%;
     margin: auto;
 
     background: rgba(0, 0, 0, 0.082);
