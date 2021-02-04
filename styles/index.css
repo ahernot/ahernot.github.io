@@ -1,5 +1,7 @@
+.presentation { background:rgba(171, 255, 150, 0.644); }
 .presentation-container {
     display: flex;
+    flex-direction: column; /* change main axis to be horizontal axis */
 
     width: 95%;
     height: 50vh;
@@ -7,6 +9,22 @@
     
     background: rgba(150, 150, 255, 0.644);
 }
+.presentation-text {
+    /*padding: 0px 100px 0px 0px;*/
+    width: 70%;
+    
+    border: 3px solid green;
+}
+.LI-profile-badge {
+    align-self: flex-end; /* align on main axis */
+    
+    align-content: flex-start;
+    justify-content: flex-end;
+    margin-bottom: auto;
+
+    border: 3px solid rgb(2, 0, 128);
+}
+
 
 .cv-container {
     display: flex;
