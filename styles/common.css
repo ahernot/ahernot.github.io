@@ -26,8 +26,23 @@ header {
 
 /* Styles */
 .logo-container, .nav-links { display: flex; }
-.logo-container { flex: 1; }
-.logo { font-weight: 400; font-size: 40px; margin: 5px; color: #000000; text-decoration: none; }
+.logo-container { flex: 1; flex-direction: column; border: 3px solid red;}
+    .logo {
+        font-weight: 400;
+        font-size: 40px;
+        /*margin: 5px;*/
+        color: #000000;
+        text-decoration: none;
+        
+        display: flex;
+        border: 3px solid green;
+        align-self: flex-start;
+    }
+    .logo-subtitle {
+        display: flex;
+        align-self: flex-start;
+        border: 3px solid green;
+    }
 
 nav { flex: 2; }
 .nav-links { justify-content: space-around; list-style: none; }
