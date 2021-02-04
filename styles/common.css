@@ -21,7 +21,8 @@ header {
     align-items: center;
 }
 
-.page-title { font-weight: 400; font-size: 24px; width: 95%; margin: auto; background: rgba(118, 180, 102, 0.308); } /* margin: 25px; }*/
+/* Page Title */
+.page-title { font-weight: 400; font-size: 24px; width: 95%; margin: auto; color: #000000; background: rgba(0, 0, 0, 0.082); } /* margin: 25px; }*/
 
 /* Styles */
 .logo-container, .nav-links { display: flex; }
@@ -33,10 +34,11 @@ nav { flex: 2; }
 .nav-link { color: #5f5f79; font-size: 18px; text-decoration: none; }
 
 
+/* Footer style */
 footer {
     display: flex;
     width: 80%;
     margin: auto;
 
-    background: rgba(80, 80, 80, 0.5);
+    background: rgba(0, 0, 0, 0.082);
 }
