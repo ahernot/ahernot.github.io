@@ -44,8 +44,13 @@
     text-decoration: none;
 }
 
+/*
 .cv-img {
     flex: 1;
+}*/
+
+.cv-version {
+    font-size: 10px;
 }
 
 
