@@ -6,7 +6,8 @@
 
 /* Reduce size of main body */
 main {
-    width: 90%;
+    padding-top: 7rem;
+    /* width: 90%; */
     margin: auto;
     /*padding: 50px 0px 0px 0px;*/
 }
@@ -21,11 +22,11 @@ button { font-family: 'Poppins', sans-serif; }
 header {
     /*display: flex;*/
     
-    width: 90%; /* add margins (reduce container width) */
-    height: 10vh;
+    width: 90%; /*add margins (reduce container width)*/
+    /* height: 10vh; */
 
-    margin: auto; /* center the container */
-    align-items: center;
+    /* margin: auto; */ /* center the container */
+    /* align-items: center; */
 
     /* background: rgba(0, 0, 0, 0.082); */
 }
@@ -50,6 +51,7 @@ header {
     font-size: 18px;
     text-decoration: none;
 }
+.nav-item {width: 95%; margin: auto;}
 .navbar-nav > .active > .nav-link {
     color: black !important; /* override Bootstrap theme */
     font-weight: 500;

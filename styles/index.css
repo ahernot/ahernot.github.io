@@ -1,9 +1,6 @@
 /*.presentation { background:rgba(216, 216, 216, 0.644); }*/
 .presentation {
     /*
-    display: flex;
-    flex-direction: column;*/ /* change main axis to be horizontal axis */
-    /*
     width: 95%;
     margin: auto;
 
@@ -13,49 +10,23 @@
 
 
 .LI-profile-badge {
-    align-self: flex-end; /* align right on main axis */
+    /* align-self: flex-end; align right on main axis */
     
-    
-    align-content: flex-start;
-    justify-content: flex-end;
+    /* align-content: flex-start; */
+    /* justify-content: flex-end; */
     margin-bottom: auto;
 
     border: 3px solid rgb(2, 0, 128);
 }
 
 
-.cv-container {
-    display: flex;
 
-    width: 30%;
-    margin: auto; /* center the container */
-    align-items: center;
-    
-    background:rgba(255, 150, 150, 0.644);
-    /*padding: 0px 0px 0px 0px;*/
-}
 
 .cv-download {
-    flex: 1;
-    /*width: 10%;
-    text-align: center;*/
-
     color: #000000;
     text-decoration: none;
 }
 
-/*
-.cv-img {
-    flex: 1;
-}*/
-
 .cv-version {
     font-size: 10px;
 }
-
-
-/*
-.row, .col-xs-6, .col-xs-12 {
-    border: 3px solid green;
-}
-*/
