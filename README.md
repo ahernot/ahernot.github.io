@@ -29,3 +29,6 @@ https://fonts.google.com/specimen/Poppins?query=poppins&preview.text_type=custom
 Bootstrap:
 https://getbootstrap.com/docs/3.4/css/
 https://icons.getbootstrap.com/icons/download/
+
+Bootstrap navbar:
+https://getbootstrap.com/docs/4.0/components/navbar/

@@ -57,7 +57,11 @@ header {
 .nav-item > a:hover {
     color: rgb(255, 0, 0) !important; /* override Bootstrap theme */
 }
-
+.dropdown.show { visibility: visible; }
+/* .navbar-nav > .navbar-toggler {
+    color: #555;
+    background-color: #e7e7e7 !important;
+} */
 
 
 /* Footer */
