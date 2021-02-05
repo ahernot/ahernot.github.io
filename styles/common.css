@@ -8,7 +8,7 @@
 main {
     width: 90%;
     margin: auto;
-    padding: 50px 0px 0px 0px;
+    /*padding: 50px 0px 0px 0px;*/
 }
 
 
@@ -17,9 +17,9 @@ body { font-family: 'Poppins', sans-serif; }
 button { font-family: 'Poppins', sans-serif; }
 
 
-/* Header style */
+/* Header */
 header {
-    display: flex;
+    /*display: flex;*/
     
     width: 90%; /* add margins (reduce container width) */
     height: 10vh;
@@ -27,48 +27,57 @@ header {
     margin: auto; /* center the container */
     align-items: center;
 
-    background: rgba(0, 0, 0, 0.082);
+    /* background: rgba(0, 0, 0, 0.082); */
 }
 
 /* Page Title */
-.page-title { font-weight: 400; font-size: 24px; width: 95%; margin: auto; color: #000000; /*background: rgba(0, 0, 0, 0.082);*/ } /* margin: 25px; }*/
+.page-title {
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+    
+    /*width: 95%;*/
+    margin: auto;
+    /*background: rgba(0, 0, 0, 0.082);*/
+    /*border: 3px solid blue;*/
+} /* margin: 25px; }*/
 
-/* Styles */
-.logo-container, .nav-links { display: flex; }
-.logo-container {
-    flex: 1;
-    flex-direction: column;
-    /*border: 3px solid red;*/
+
+
+/* Navigation Bar */
+.nav-link {
+    color: #5f5f79;
+    font-size: 18px;
+    text-decoration: none;
 }
-    .logo {
-        font-weight: 400;
-        font-size: 40px;
-        /*margin: 5px;*/
-        color: #000000;
-        text-decoration: none;
-        
-        display: flex;
-        /*border: 3px solid green;*/
-        align-self: flex-start;
-    }
-    .logo-subtitle {
-        display: flex;
-        align-self: flex-start;
-        /*border: 3px solid green;*/
-    }
+.navbar-nav > .active > .nav-link {
+    color: black !important; /* override Bootstrap theme */
+    font-weight: 500;
+}
+.nav-item > a:hover {
+    color: rgb(255, 0, 0) !important; /* override Bootstrap theme */
+}
 
 
 
-nav { flex: 2; }
-.nav-links { justify-content: space-around; list-style: none; }
-.nav-link { color: #5f5f79; font-size: 18px; text-decoration: none; }
-
-
-/* Footer style */
+/* Footer */
 footer {
-    display: flex;
     width: 90%;
     margin: auto;
 
     background: rgba(0, 0, 0, 0.082);
 }
+
+/*
+@media screen and (max-width: 601px) {
+    .logo {
+        font-size:10px;
+    }
+}
+*/
+
+/*
+.logo-container, .col-md-9, .col-md-3 {
+    border: 3px solid black;
+}
+*/

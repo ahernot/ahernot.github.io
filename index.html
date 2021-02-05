@@ -31,38 +31,54 @@
 
         <!-- Header -->
         <header>
+            
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="./index.html">
+                    <h1>Anatole Hernot</h1>
+                </a>
+                
+                <!-- Button to expand mobile navbar -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <!-- Logo -->
-            <div class="logo-container">
-                <!-- <img src="./img/logo.svg" alt="logo"> -->
-                <a class="logo" href="./index.html">Anatole Hernot</a>
-                <p class="logo-subtitle">ROCKET POWERED</p>
-            </div>
+                <div class="collapse navbar-collapse animated fadeInLeft" id="navbarContent">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
-            <!-- Navigation Bar -->
-            <nav>
-                <ul class="nav-links">
-                    <!-- add Bootstrap navigation bar -->
-                    <li><a class="nav-link" href="./index.html">Home</a></li>
-                    <li><a class="nav-link" href="./pages/photography.html">Photography</a></li>
-                    <li><a class="nav-link" href="./pages/projects.html">Projects</a></li>
-                    <li><a class="nav-link" href="./pages/contact.html">Contact</a></li>
-                </ul>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/photography.html">Photography</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/projects.html">Projects</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
             </nav>
 
         </header>
 
 
-        <!--#include file="./pages/projects.html"-->
+
 
 
         <!-- Main Body -->
         <main>
 
             <!-- Page Title -->
-            <section class="page-title">
+            <div class="page-title">
                 Home
-            </section>
+            </div>
 
 
             <div class="presentation">
@@ -76,7 +92,7 @@
 
                         <br><br>
                         
-                        My name is Anatole, I am French civil engineering student at the École des Mines ParisTech in Paris.<br>
+                        I am French civil engineering student at the École des Mines ParisTech in Paris.<br>
                         I am an amateur photographer and programmer.
 
                         <br><br>
@@ -129,9 +145,22 @@
 
         <!-- Footer -->
         <footer>
+            <div class="row">
+                <div class="col-md-4 col-xs-3">
+                    INSTAGRAM
+                </div>
+                <div class="col-md-4 col-xs-3">
+                    YOUTUBE
+                </div>
+                <div class="col-md-4 col-xs-3">
+                    GITHUB
+                </div>
+            </div>
+            <!--
             <p class="footer-text">
                 &copy; Anatole Hernot 2021
             </p>
+            -->
         </footer>
 
     </body>
