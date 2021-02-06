@@ -1,3 +1,8 @@
+main {
+    padding-top: 6rem;
+    width: 90%;
+    margin: auto;
+}
 .instagram-feed {
     width: 70%;
     margin: auto; /* align in center */

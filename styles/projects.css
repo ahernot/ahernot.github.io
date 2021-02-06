@@ -1,5 +1,8 @@
-
-
+main {
+    padding-top: 6rem;
+    width: 90%;
+    margin: auto;
+}
 
 .project-container {
     padding: 1vh 0vh 1vh 0vh;

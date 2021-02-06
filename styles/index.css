@@ -8,6 +8,105 @@
     */
 }
 
+.cv, .presentation {
+    width: 90%;
+    margin: auto;
+}
+
+
+#carousel {
+    text-align: center;
+}
+.image-wrap{
+    width:100%;
+    position:relative;
+    overflow:hidden;
+}
+#carousel .image-wrap img.facilitiesImage {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+@supports (object-fit: cover){
+    #carousel .image-wrap img.d-block {
+
+    height: 45vw;
+    min-height: 300px;
+
+    margin-left: auto;
+    margin-right: auto;
+    object-fit:cover;
+    }
+}
+
+/* .dark-overlay {
+    position: relative;
+}
+.dark-overlay:after {
+    display: block;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    min-height: 500px;
+    border: 3px solid green;
+} */
+
+.carousel {
+    /* overflow: hidden; */
+}
+    .carousel-item {
+        overflow: hidden;
+        margin: auto;
+    }
+        img {
+            height: 100%;
+            max-width: none;
+            left: 50%;
+            position: relative;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+        }
+        
+        .image-wrap{
+            width:100%;
+            position:relative;
+            overflow:hidden;
+            height:100%;/* set arbitrary height*/
+          }
+          
+          #carousel .image-wrap img.facilitiesImage {
+            width: auto;
+            height:240px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow:hidden;
+          }
+          @supports (object-fit: cover){
+          #carousel .image-wrap img.facilitiesImage {
+            /* width: 60%; */
+            height:240px;
+            margin-left: auto;
+            margin-right: auto;
+            object-fit:cover;
+          }
+          }   
+
+    .image-caption {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }     
+    .carousel-caption {
+        width: 100%;
+        transform: translateX(-15%); /* translateY(15%);
+        height: 28%;*/
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .carousel-caption > a:hover {
+        color: rgb(184, 184, 184) !important;
+    }
+
 
 .LI-profile-badge {
     /* align-self: flex-end; align right on main axis */
@@ -22,6 +121,7 @@
 
 
 
+
 .cv-download {
     color: #000000;
     text-decoration: none;
@@ -30,3 +130,5 @@
 .cv-version {
     font-size: 10px;
 }
+
+
