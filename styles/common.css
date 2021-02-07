@@ -28,6 +28,8 @@
     --footer-color-dark: black; /* rgb(39, 39, 39) */;
     --footer-text-light: black;
     --footer-text-dark: white;
+    --footer-copyright-light: rgb(190, 190, 190);
+    --footer-copyright-dark: rgb(43, 43, 43);
 }
 
 
@@ -85,7 +87,10 @@ main {
 
 
 
-
+.disclaimer {
+    width: 90%;
+    margin: auto;
+}
 
 
 
@@ -163,6 +168,8 @@ main {
 
 
 
+
+
 /*----- FOOTER -----*/
 footer { background: var(--footer-color-light); }
     @media (prefers-color-scheme: light) {
@@ -173,7 +180,19 @@ footer { background: var(--footer-color-light); }
     }
 
 
-.footer-container { width: 90%; margin: auto; }
+.footer-container {
+    width: 90%;
+    margin: auto;
+    padding: 40px 0px 10px 0px;
+    color: var(--footer-copyright-light);
+}
+    @media (prefers-color-scheme: light) {
+        .footer-container { color: var(--footer-copyright-light); }
+    }
+    @media (prefers-color-scheme: dark) {
+        .footer-container { color: var(--footer-copyright-dark); }
+    }
+
 
 
 .footer-link {
