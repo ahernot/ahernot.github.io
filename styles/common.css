@@ -131,23 +131,15 @@ header {
 }
 
 
-.custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='yellow' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    color: var(--navbar-button-light);
-}
+/* Navbar Toggler */
+.custom-toggler .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important; /* color: var(--navbar-button-light) !important; */ } /* color of lines */
+.custom-toggler.navbar-toggler { border-color: var(--navbar-button-light) !important; } /* color of border */
     @media (prefers-color-scheme: light) {
-        .custom-toggler .navbar-toggler-icon { color: var(--navbar-button-light); }
-    }
-    @media (prefers-color-scheme: dark) {
-        .custom-toggler .navbar-toggler-icon { color: var(--navbar-button-dark); }
-    }
-
-
-.custom-toggler.navbar-toggler { border-color: var(--navbar-button-light) !important; }
-    @media (prefers-color-scheme: light) {
+        .custom-toggler .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important; /* color: var(--navbar-button-light) !important; */ }
         .custom-toggler.navbar-toggler { border-color: var(--navbar-button-light) !important; }
     }
     @media (prefers-color-scheme: dark) {
+        .custom-toggler .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important; /* color: var(--navbar-button-dark) !important; */ }
         .custom-toggler.navbar-toggler { border-color: var(--navbar-button-dark) !important; }
     }
 
