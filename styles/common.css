@@ -1,6 +1,5 @@
 :root {
     /* Background Styles */
-    /* --background-grey-light: 0; */
     --page-color-light: white;
     --page-color-dark: black;
     --background-color-light: white;
@@ -11,6 +10,8 @@
     --text-color-dark: white;
     --header-color-light: black;
     --header-color-dark: white;
+
+    --link-accent-color: red;
 
     /* Navbar Styles */
     --navbar-color-light: #e7e7e7 /* #cecece */;
@@ -59,9 +60,17 @@ h1 { color: var(--header-color-light); }
 
 
 
+
+
+
+
+
+
+
+
 /*----- MAIN BODY -----*/
 main {
-    /* padding-top: 6rem; */
+    padding-top: 70px;
     margin: auto;
     
     background-color: var(--background-color-light);
@@ -84,9 +93,11 @@ main {
 
 
 /*----- HEADER -----*/
-header {
-    background-color: black;
-}
+/* nothing */
+
+
+
+
 
 
 
@@ -116,7 +127,7 @@ header {
     }
 
 
-.nav-item > a:hover { color: rgb(255, 0, 0) !important; }
+.nav-item > a:hover { color: var(--link-accent-color) !important; }
     
 
 .dropdown.show { visibility: visible; }
@@ -146,12 +157,14 @@ header {
 
 
 
+/*----- MAIN BODY -----*/
+.page-title { width: 90%; margin: auto; }
+.page-content { width: 90%; margin: auto; }
+
+
 
 /*----- FOOTER -----*/
-footer {
-    background: var(--footer-color-light);
-    /* background: rgba(0, 0, 0, 0.082);  */
-}
+footer { background: var(--footer-color-light); }
     @media (prefers-color-scheme: light) {
         footer { background: var(--footer-color-light); }
     }
@@ -175,6 +188,4 @@ footer {
     }
 
 
-.footer-link:hover {
-    color: red;
-}
+.footer-link:hover { color: var(--link-accent-color); }

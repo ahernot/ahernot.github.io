@@ -1,13 +1,12 @@
-/*.presentation { background:rgba(216, 216, 216, 0.644); }*/
-.presentation {
-    /*
-    width: 95%;
-    margin: auto;
+:root {
+    /* Text Styles */
+    --text-color-light: black;
+    --text-color-dark: white;
 
-    background: rgba(0, 0, 0, 0.329);
-    */
+    --link-accent-color: red;
 }
 
+/* Set page width */
 .cv, .presentation {
     width: 90%;
     margin: auto;
@@ -18,9 +17,9 @@
     text-align: center;
 }
 .image-wrap{
-    width:100%;
-    position:relative;
-    overflow:hidden;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 #carousel .image-wrap img.facilitiesImage {
     width: auto;
@@ -70,15 +69,15 @@
         }
         
         .image-wrap{
-            width:100%;
-            position:relative;
-            overflow:hidden;
-            height:100%;/* set arbitrary height*/
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            height: 100%;/* set arbitrary height*/
           }
           
           #carousel .image-wrap img.facilitiesImage {
             width: auto;
-            height:240px;
+            height: 240px;
             margin-left: auto;
             margin-right: auto;
             overflow:hidden;
@@ -124,12 +123,20 @@
 
 
 .cv-download {
-    color: #000000;
     text-decoration: none;
+    color: var(--text-color-light);
+}
+    @media (prefers-color-scheme: light) {
+        .cv-download { color: var(--text-color-light); }
+    }
+    @media (prefers-color-scheme: dark) {
+        .cv-download { color: var(--text-color-dark); }
+    }
+
+.cv-download:hover {
+    color: var(--link-accent-color) !important;
 }
 
-.cv-version {
-    font-size: 10px;
-}
+.cv-version { font-size: 10px; }
 
 
