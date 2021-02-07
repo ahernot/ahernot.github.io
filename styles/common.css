@@ -1,6 +1,8 @@
 :root {
     /* Background Styles */
     /* --background-grey-light: 0; */
+    --page-color-light: white;
+    --page-color-dark: black;
     --background-color-light: white;
     --background-color-dark: #333;
 
@@ -33,6 +35,15 @@
 /* Prevent horizontal scrolling */
 html, body { max-width: 100%; overflow-x: hidden; }
 
+/* Main Background Color */
+body { background-color: var(--page-color-light) !important; }
+    @media (prefers-color-scheme: light) {
+        body { background-color: var(--page-color-light) !important; }
+    }
+    @media (prefers-color-scheme: dark) {
+        body { background-color: var(--page-color-dark) !important; }
+    }
+
 /* Set fonts */
 body { font-family: 'Poppins', sans-serif; }
 button { font-family: 'Poppins', sans-serif; }
@@ -48,12 +59,9 @@ h1 { color: var(--header-color-light); }
 
 
 
-
-
-
 /*----- MAIN BODY -----*/
 main {
-    /* padding-top: 6rem; width: 90%; */
+    /* padding-top: 6rem; */
     margin: auto;
     
     background-color: var(--background-color-light);
