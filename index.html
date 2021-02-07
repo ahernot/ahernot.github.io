@@ -41,7 +41,7 @@
         <header>
             
             
-            <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light fixed-top" role="navigation">
+            <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light fixed-top" role="navigation"> <!-- remove bg-light theme-->
                 <div class="container-fluid">
                     <!-- Navbar title -->
                     <a class="navbar-brand" href="./index.html">
@@ -49,7 +49,7 @@
                     </a>
                     
                     <!-- Button to expand mobile navbar -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"> <!--aria-haspopup="true"-->
+                    <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"> <!--aria-haspopup="true"-->
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -173,6 +173,22 @@
 
 
 
+
+
+
+
+            <!--
+            <div class="day">Day (initial)</div>
+            <div class="day light-scheme">Day (changes in light scheme)</div>
+            <div class="day dark-scheme">Day (changes in dark scheme)</div> <br>
+
+            <div class="night">Night (initial)</div>
+            <div class="night light-scheme">Night (changes in light scheme)</div>
+            <div class="night dark-scheme">Night (changes in dark scheme)</div>
+            -->
+
+
+
             🚧 WORK IN PROGRESS 🚧
             <br>
 
@@ -235,22 +251,24 @@
 
         <!-- Footer -->
         <footer>
-            <div class="row">
-                <div class="col-md-4 col-xs-3">
-                    INSTAGRAM
+            <div class="footer-container">
+                <div class="row">
+                    <div class="col-md-4 col-xs-3">
+                        <a class="footer-link" title="Connect on Instagram" href="#">INSTAGRAM</a>
+                    </div>
+                    <div class="col-md-4 col-xs-3">
+                        <a class="footer-link" title="not sorry" href="https://www.youtube.com/watch?v=DLzxrzFCyOs">YOUTUBE</a>
+                    </div>
+                    <div class="col-md-4 col-xs-3">
+                        <a class="footer-link" title="Connect on GitHub" href="#">GITHUB</a>
+                    </div>
                 </div>
-                <div class="col-md-4 col-xs-3">
-                    <a class="footer-link" title="not sorry" href="https://www.youtube.com/watch?v=DLzxrzFCyOs">YOUTUBE</a>
-                </div>
-                <div class="col-md-4 col-xs-3">
-                    GITHUB
-                </div>
+                <!--
+                <p class="footer-text">
+                    &copy; Anatole Hernot 2021
+                </p>
+                -->
             </div>
-            <!--
-            <p class="footer-text">
-                &copy; Anatole Hernot 2021
-            </p>
-            -->
         </footer>
 
     </body>

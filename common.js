@@ -1,3 +1,5 @@
+// USELESS FILE
+
 (function() {
     var isBootstrapEvent = false;
     if (window.jQuery) {
@@ -23,3 +25,17 @@
         }
     });
 })();
+
+
+
+
+
+// Dark Mode
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+print(preversDarkScheme)
+
+if (prefersDarkScheme.matches) {
+  document.body.classList.add("dark-theme");
+} else {
+  document.body.classList.remove("dark-theme");
+}
