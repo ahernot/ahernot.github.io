@@ -52,12 +52,20 @@ body { font-family: 'Poppins', sans-serif; }
 button { font-family: 'Poppins', sans-serif; }
 
 
-h1 { color: var(--header-color-light); }
+h1, h5 { color: var(--header-color-light); }
     @media (prefers-color-scheme: light) {
-        h1 { color: var(--header-color-light); }
+        h1, h5 { color: var(--header-color-light); }
     }
     @media (prefers-color-scheme: dark) {
-        h1 { color: var(--header-color-dark); }
+        h1, h5 { color: var(--header-color-dark); }
+    }
+
+p { color: var(--text-color-light); }
+    @media (prefers-color-scheme: light) {
+        p { color: var(--text-color-light); }
+    }
+    @media (prefers-color-scheme: dark) {
+        p { color: var(--text-color-dark); }
     }
 
 

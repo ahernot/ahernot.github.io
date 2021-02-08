@@ -1,3 +1,18 @@
+:root {
+    /* Text Styles */
+    --text-color-light: black;
+    --text-color-dark: white;
+
+    --card-background-light: white;
+    --card-background-dark: rgb(29, 29, 29) /* rgb(92, 92, 92) */;
+    --card-border-light: rgb(179, 179, 179);
+    --card-border-dark: rgb(100, 100, 100) /* white */;
+    --card-shadow-light: rgba(33, 33, 33, .3);
+    --card-shadow-dark: rgba(255, 255, 255, .4) /* rgba(255, 255, 255, .7) */;
+    /* --card-header-light: #e7e7e7; */ /* --navbar-color-light */
+    /* --card-header-dark: black; */ /* --navbar-color-dark */
+}
+
 main {
     padding-top: 6rem;
 }
@@ -62,11 +77,41 @@ main {
         text-decoration: none;
         color: black;
     }
+    /* .card > a:hover {
+        color: red !important;
+    } */
+
+    .card > .card-header {
+        text-align: center;
+        font-weight: bold;
+
+        /* background-color: var(--card-header-light); */
+        background: transparent;
+    }
+        @media (prefers-color-scheme: light) {
+            .card > .card-header { background: transparent; /*background-color: var(--card-header-light);*/ }
+        }
+        @media (prefers-color-scheme: dark) {
+            .card > .card-header { background: transparent; /*background-color: var(--card-header-dark);*/ }
+        }
+    
     .card {
         margin: 10px;
-        /* flex-wrap: wrap;
-        flex: initial; */
+        
+        background-color: var(--card-background-light) !important;
+        border: 1px solid var(--card-border-light) !important;      
     }
-    .card:hover {
-        box-shadow: 0 0 11px rgba(33,33,33,.2); 
-    }
+        @media (prefers-color-scheme: light) {
+            .card { background-color: var(--card-background-light) !important; border: 1px solid var(--card-border-light) !important; }
+        }
+        @media (prefers-color-scheme: dark) {
+            .card { background-color: var(--card-background-dark) !important; border: 1px solid var(--card-border-dark) !important; }
+        }
+
+    .card:hover { box-shadow: 0 0 11px var(--card-shadow-light); }
+        @media (prefers-color-scheme: light) {
+            .card:hover { box-shadow: 0 0 11px var(--card-shadow-light); }
+        }
+        @media (prefers-color-scheme: dark) {
+            .card:hover { box-shadow: 0 0 11px var(--card-shadow-dark); }
+        }
