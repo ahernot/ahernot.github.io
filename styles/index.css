@@ -34,7 +34,7 @@
 
     margin-left: auto;
     margin-right: auto;
-    object-fit:cover;
+    object-fit: cover;
     }
 }
 
@@ -95,6 +95,7 @@
     .image-caption {
         text-decoration: none;
         color: rgb(255, 255, 255);
+        
     }     
     .carousel-caption {
         width: 100%;
