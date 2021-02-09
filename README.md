@@ -3,11 +3,14 @@
 <br><br>
 
 # To do
-* convert favicon to PNG and finalize design with rounded corners
-    * add favicon.ico https://stackoverflow.com/questions/4888377/how-to-add-a-browser-tab-icon-favicon-for-a-website in root directory
+* add padding below carousel caption
+* add transparent container on top of carousel, becomes opaque when dark mode (and blurry when hover? or ZOOM when hover)
+* add gradient alpha background behind carousel caption
+* finalize favicon design with rounded corners
 * rename ./pages/ to ./html/
 * rename ./styles/ to ./css/
 * rename ./styles/common.css to ./css/styles.css
+
 
 
 Structuring guidance:
