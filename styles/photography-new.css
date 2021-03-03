@@ -1,5 +1,8 @@
 
 
+.album-row {
+    width: 95%; /* Page width */
+}
 
 .album-container {
     /* Center container and adjust width */
