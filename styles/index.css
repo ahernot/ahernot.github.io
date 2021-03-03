@@ -52,6 +52,14 @@
     border: 3px solid green;
 } */
 
+
+
+/* Transparent overlay */
+.transparent-overlay {
+    background: transparent;
+}
+/* Same as dark-overlay, but with no colour / only contains link for image. */
+
 .carousel {
     /* overflow: hidden; */
 }
@@ -62,10 +70,9 @@
         img {
             height: 100%;
             max-width: none;
-            left: 50%;
-            position: relative;
-            transform: translateX(-50%);
-            -webkit-transform: translateX(-50%);
+            /* left: 50%; */
+            /* position: relative; */
+            transform: translateX(0, -50%);
         }
         
         .image-wrap{
