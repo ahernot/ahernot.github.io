@@ -133,7 +133,7 @@ main {
 
 
 /*----- NAVIGATION BAR -----*/
-.nav-link {
+/* .nav-link {
     font-size: 18px;
     text-decoration: none;
     background: var(--navbar-color-light);
@@ -156,19 +156,19 @@ main {
     }
 
 
-.nav-item > a:hover { color: var(--link-accent-color) !important; }
+.nav-item > a:hover { color: var(--link-accent-color) !important; } */
     
 
 .dropdown.show { visibility: visible; }
 
 
-.navbar { background-color: var(--navbar-color-light); }
+/* .navbar { background-color: var(--navbar-color-light); }
 @media (prefers-color-scheme: light) {
     .navbar { background-color:var(--navbar-color-light); }
 }
 @media (prefers-color-scheme: dark) {
     .navbar { background-color: var(--navbar-color-dark); }
-}
+} */
 
 
 /* Navbar Toggler */
