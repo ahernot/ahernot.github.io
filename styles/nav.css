@@ -57,7 +57,7 @@
                 justify-content: center;
                 width: 100%;
             }
-            .navlink-container { display: none; width: 0%;}
+            .navlink-container { display: none; width: 0%; }
         }
         @media (max-width: 749px) {
             .logo { width: 100px; }
