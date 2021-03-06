@@ -38,14 +38,13 @@
     /* Navbar logo */
     .logo {
         text-decoration: none;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         margin-left: 4vw;
         display: flex;
     }
     .logo-text {
         text-decoration: none;
         font-size: 37px;
-
         color: var(--logo-color-light);
     }
     .logo-img {
@@ -53,7 +52,6 @@
     }
         @media (max-width: 450px) {
             .logo { 
-                /* display: flex; */
                 justify-content: center;
                 width: 100%;
                 margin: auto;
@@ -88,7 +86,7 @@
             text-decoration: none;
             color: var(--navlink-color-light);
 
-            border: 1px solid blue;
+            /* border: 1px solid blue; */
             font-size: 18px;
             margin: 8px;
         }
