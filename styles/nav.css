@@ -53,11 +53,12 @@
     }
         @media (max-width: 450px) {
             .logo { 
-                display: flex;
+                /* display: flex; */
                 justify-content: center;
                 width: 100%;
+                margin: auto;
             }
-            .navlink-container { display: none; width: 0%; }
+            .navlink-container { display: none; }
         }
         @media (max-width: 749px) {
             .logo { width: 100px; }
@@ -69,6 +70,7 @@
             .logo-img { display: none; }
             .logo-text { display: block; }
         }
+        
         @media (prefers-color-scheme: light) {
             .logo-text { color: var(--logo-color-light); }
         }
