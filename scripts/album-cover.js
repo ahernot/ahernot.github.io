@@ -1,16 +1,19 @@
+let imageContainers = document.getElementsByClassName("image-container");
 
-// let imageContainer = document.getElementsByClassName("image-container");
-let imageContainer = document.getElementById("image-container")
-let imageOverlay = document.getElementById("image-overlay");  // transparent image overlay (appear on hover)
+for (var i = 0; i < imageContainers.length; i++) {
 
-console.log('done');
+    // Get class instances
+    let imageContainer = imageContainers[i];
+    let imageOverlay = imageContainer.getElementsByClassName("image-overlay");
 
-imageContainer.addEventListener("mouseover", function(event) {
-    imageOverlay.classList.add("active");
-});
+    // Mouseover event
+    imageContainer.addEventListener("mouseover", function(event) {
+        imageOverlay[0].classList.add("active");
+    });
 
-imageContainer.addEventListener("mouseleave", function(event) {
-    imageOverlay.classList.remove("active");
-});
-
-// Transition must last .2s
+    // Mouseleave event
+    imageContainer.addEventListener("mouseleave", function(event) {
+        imageOverlay[0].classList.remove("active");
+    });
+    
+};
