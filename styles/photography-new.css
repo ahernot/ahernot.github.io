@@ -42,6 +42,16 @@
     .album-container:hover {
         box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
     }
+        @media (prefers-color-scheme: light) {
+            .album-container:hover {
+                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+            }
+        }
+        @media (prefers-color-scheme: dark) {
+            .album-container:hover {
+                box-shadow: 2px 2px 5px 1px rgba(20, 20, 20, 0.7);
+            }
+        }
 
 .image-container {
     /* width: 45vw; */
