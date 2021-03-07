@@ -3,10 +3,11 @@
 .album-row {
     width: 95%; /* Page width */
     margin: auto;
-    
+    margin-bottom: 30px;
+
     display: flex;
     flex-direction: row;
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
 }
     @media (max-width: 750px) {
         .album-row {
@@ -17,15 +18,30 @@
 .album-container {
     /* Center container and adjust width */
     width: 45vw;
-    min-width: 300px;
+    /* min-width: 300px; */
+    max-width: 800px;
+    max-height: 600px;
+
     margin: auto;
     /* margin-bottom: 0; */
 
     position: relative;
 
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
+    @media (max-width: 750px) {
+        .album-container{
+            width: 95vw;
+            height: 75vw;
+        }
+        .image-container {
+            height: 75vw !important;
+        }
+    }
 
+    .album-container:hover {
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+    }
 
 .image-container {
     /* width: 45vw; */
@@ -37,10 +53,11 @@
     overflow: hidden;
 }
     .image-container > img {
-        position: absolute; /* or relative ? */
+        position: absolute;
 
         /* Set image size */
-        width: 100%;
+        /* width: 100%; */
+        height: 100%; /* height will fill so will overflow in width; bug for small sizes */
         min-width: 45vw;
         min-height: 30vw;
         
@@ -63,6 +80,11 @@
         text-align: center;
 
     }
+        @media (max-width: 750px) {
+            .image-container > .image-overlay {
+                height: 75vw !important;
+            }
+        }
 
     .image-container > .image-overlay.active {
         transition: 0.3s;
@@ -72,4 +94,13 @@
 
 .album-text {
     text-decoration: none;
+    margin-left: 10px;
+}
+
+
+
+
+.banner {
+    height: 70px;
+    border: 1px solid red;
 }
