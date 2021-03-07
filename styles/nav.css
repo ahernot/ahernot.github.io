@@ -1,6 +1,6 @@
 :root {
     /* Background Styles */
-    --navbar-background-light: #e7e7e7;
+    --navbar-background-light: white; /*#e7e7e7;*/
     --navbar-background-dark: black;
   
     /* Text Styles */
@@ -34,6 +34,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-bottom: 1px solid black;
 }
     /* Navbar logo */
     .logo {
@@ -44,7 +45,9 @@
     }
     .logo-text {
         text-decoration: none;
+        font-family: 'Poppins', sans-serif;
         font-size: 37px;
+        font-weight: 500;
         color: var(--logo-color-light);
     }
     .logo-img {
