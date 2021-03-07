@@ -96,7 +96,7 @@ body {
 
 /*----- MAIN BODY -----*/
 main {
-    padding-top: 70px;
+    padding-top: 70px; /* was useful for bootstrap */
     margin: auto;
     
     background-color: var(--background-color-light);
