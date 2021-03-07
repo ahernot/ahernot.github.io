@@ -3,7 +3,6 @@
 .album-row {
     width: 95%; /* Page width */
     margin: auto;
-    margin-bottom: 30px;
 
     display: flex;
     flex-direction: row;
@@ -23,7 +22,7 @@
     max-height: 600px;
 
     margin: auto;
-    /* margin-bottom: 0; */
+    margin-bottom: 30px;
 
     position: relative;
 
