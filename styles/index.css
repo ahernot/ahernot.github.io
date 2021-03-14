@@ -1,134 +1,24 @@
-:root {
-    /* Text Styles */
-    --text-color-light: black;
-    --text-color-dark: white;
-
-    --link-accent-color: red;
-}
-
-/* Set page width */
-.cv, .presentation {
-    width: 90%;
+main {
+    width: 95%;
     margin: auto;
 }
 
-
-#carousel {
+#intro-message {
+    margin-top: 3vw;
+    font-size: 48px;
+    font-weight: 500;
+    min-height: 80px;
     text-align: center;
 }
-.image-wrap{
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-#carousel .image-wrap img.facilitiesImage {
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-@supports (object-fit: cover){
-    #carousel .image-wrap img.d-block {
 
-    height: 45vw;
-    min-height: 300px;
-
-    margin-left: auto;
-    margin-right: auto;
-    object-fit: cover;
-    }
+#introduction {
+    height: 1000px;
 }
 
-/* .dark-overlay {
-    position: relative;
+.cv {
+    width: 95%;
+    margin: auto;
 }
-.dark-overlay:after {
-    display: block;
-    background: rgba(0,0,0,0.7);
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    min-height: 500px;
-    border: 3px solid green;
-} */
-
-
-
-/* Transparent overlay */
-.transparent-overlay {
-    background: transparent;
-}
-/* Same as dark-overlay, but with no colour / only contains link for image. */
-
-.carousel {
-    /* overflow: hidden; */
-}
-    .carousel-item {
-        overflow: hidden;
-        margin: auto;
-    }
-        img {
-            height: 100%;
-            max-width: none;
-            /* left: 50%; */
-            /* position: relative; */
-            transform: translateX(0, -50%);
-        }
-        
-        .image-wrap{
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            height: 100%;/* set arbitrary height*/
-          }
-          
-          #carousel .image-wrap img.facilitiesImage {
-            width: auto;
-            height: 240px;
-            margin-left: auto;
-            margin-right: auto;
-            overflow:hidden;
-          }
-          @supports (object-fit: cover){
-          #carousel .image-wrap img.facilitiesImage {
-            /* width: 60%; */
-            height:240px;
-            margin-left: auto;
-            margin-right: auto;
-            object-fit:cover;
-          }
-          }   
-
-    .image-caption {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        
-    }     
-    .carousel-caption {
-        width: 100%;
-        transform: translateX(-15%); /* translateY(15%);
-        height: 28%;*/
-        /* background: rgba(0, 0, 0, 0.2); */
-        /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%); */ /* FIND A WAY TO HAVE A GOOD BACKGROUND: on full height? or only that for smaller screens? max-height then, and anchor down */
-    }
-    .carousel-caption > a:hover {
-        color: rgb(184, 184, 184) !important;
-    }
-
-
-.LI-profile-badge {
-    /* align-self: flex-end; align right on main axis */
-    
-    /* align-content: flex-start; */
-    /* justify-content: flex-end; */
-    margin-bottom: auto;
-
-    border: 3px solid rgb(2, 0, 128);
-}
-
-
-
-
 
 .cv-download {
     text-decoration: none;
@@ -146,5 +36,4 @@
 }
 
 .cv-version { font-size: 10px; }
-
 
