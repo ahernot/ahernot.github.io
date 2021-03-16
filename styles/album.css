@@ -1,0 +1,87 @@
+.content-container {
+    width: 95vw;
+    margin: auto;
+    margin-bottom: 30px;
+
+    position: relative;
+
+    border: 1px solid green;
+}
+    @media (max-width: 749px) {
+        .content-container{
+            width: 95vw;
+            height: 50vw;
+
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+        .image-container {
+            height: 75vw !important;
+        }
+    }
+
+    @media (min-width: 750px) {
+        .content-container { overflow: hidden; }
+    }
+
+
+.image-container {
+    width: 100%;
+    height: 30vw;
+    position: relative; /* position relative for 100% in children containers) */
+    border: 1px solid red;
+
+    /* overflow: hidden; */
+}
+    .image-container > img {
+        position: absolute;
+
+        /* Set image size */
+        /* width: 100%; */
+        height: 100%; /* height will fill so will overflow in width; bug for small sizes */
+        min-width: 45vw;
+        min-height: 30vw;
+        
+        /* Center anchor point */
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        
+        /* border: 1px solid red; */
+    }
+    .image-container > .image-overlay {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+
+        color: transparent;
+        text-decoration: none;
+        background-color: transparent;
+        z-index: 1;
+        text-align: center;
+
+    }
+        @media (max-width: 750px) {
+            .image-container > .image-overlay {
+                height: 75vw !important;
+            }
+        }
+    
+        .overlay-text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            top: 50%;
+        }
+
+    .image-container > .image-overlay.active {
+        transition: 0.3s;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+.album-text {
+    text-decoration: none;
+    margin-left: 10px;
+}
