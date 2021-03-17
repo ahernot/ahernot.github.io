@@ -11,7 +11,7 @@
 * rename ./styles/ to ./css/
 * rename ./styles/common.css to ./css/styles.css
 
-
+* write "Anatole" in red
 
 Structuring guidance:
 https://www.learnhowtoprogram.com/user-interfaces/building-layouts-preprocessors/multi-page-html-sites

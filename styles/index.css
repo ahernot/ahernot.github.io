@@ -3,6 +3,10 @@ main {
     margin: auto;
 }
 
+.spacer {
+    height: 6vw;
+}
+
 #intro-message {
     margin-top: 3vw;
     font-size: 48px;
@@ -12,8 +16,86 @@ main {
 }
 
 #introduction {
-    height: 1000px;
+    /* height: 1000px; */
 }
+
+
+.items-row {
+    width: 100%;
+    justify-content: center;
+}
+.item {
+    border-radius: 5px; 
+    min-height: 100px;
+    max-width: 500px;
+    width: 45vw;
+    margin: 10px;
+
+    border: 1px solid black;
+    /* background-color: rgba(250, 124, 85, 0.3); */
+    /* background-color: rgba(226, 19, 46, 0.425); */
+
+    text-decoration: none;
+    display: none;
+    position: relative;
+    align-items: center;
+}
+    .item:hover {
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    .item-text {
+        width: 100%;
+        text-align: center;
+        color: black;
+
+        font-size: 35px;
+
+        /* border: 1px solid green; */
+    }
+
+.item.active {
+    display: flex;
+}
+/*.item.active {
+    animation-name: bounceIn;
+    animation-duration: 450ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+} */
+
+/* @keyframes bounceIn{
+    0%{
+      opacity: 0;
+      transform: scale(0.3) translate3d(0,0,0);
+    }
+    50%{
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+    80%{
+      opacity: 1;
+      transform: scale(0.89);
+    }
+    100%{
+      opacity: 1;
+      transform: scale(1) translate3d(0,0,0);
+    }
+  } */
+
+
+
+.div-line {
+    width: 60vw;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 3px solid black;
+}
+
+
+
+
 
 .cv {
     width: 95%;
