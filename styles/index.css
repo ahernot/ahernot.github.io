@@ -1,6 +1,18 @@
+body {
+    background: url("/resources/images/IMG_0053.JPG");
+    background-position: 50% 20%;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+}
+
+
+
 main {
     width: 95%;
     margin: auto;
+    height: 200vh;
+    background-color: transparent;
 }
 
 .spacer {
@@ -31,7 +43,7 @@ main {
     width: 45vw;
     margin: 10px;
 
-    border: 1px solid black;
+    border: 2px solid rgba(0, 0, 0, 0.5);
     /* background-color: rgba(250, 124, 85, 0.3); */
     /* background-color: rgba(226, 19, 46, 0.425); */
 
@@ -41,7 +53,10 @@ main {
     align-items: center;
 }
     .item:hover {
-        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+        /* box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5); */
+        transition: 0.1s;
+        border: 3px solid white;
+        background-color: rgba(255, 255, 255, 0.3);
     }
 
     .item-text {
@@ -52,6 +67,16 @@ main {
         font-size: 35px;
 
         /* border: 1px solid green; */
+    }
+
+    @media (max-width: 749px) {
+        .items-row {
+            flex-direction: column;
+            align-items: center;
+        }
+        .item {
+            width: 90vw;
+        }
     }
 
 .item.active {
