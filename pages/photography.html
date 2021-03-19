@@ -3,25 +3,33 @@
 
 
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta name="description" content="Anatole Hernot's website">
+        <meta name="author" content="">
+        <meta name="generator" content="">
+
+        <!-- Favicon -->
+        <link rel="icon" href="../resources/images/favicon.jpg">
 
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">        
         
         <!-- Styles -->
-        <link rel="stylesheet" href="../styles/common.css" /> <!-- header & footer -->
-        <link rel="stylesheet" href="../styles/photography.css" /> <!-- page-specific styles -->
+        <link rel="stylesheet" href="../styles/global.css">
+        <link rel="stylesheet" href="../styles/photography.css">
+        <link rel="stylesheet" href="../styles/nav.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"> <!-- Bootstrap icons -->
-        <link rel="stylesheet" href="../assets/dist/css/bootstrap.min.css"> <!-- Bootstrap core CSS (bootstrap-5.0.0-beta1-dist) -->
-
-        <script src="../assets/dist/js/bootstrap.min.js"></script>
-
+        
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script> -->
+        <script type="text/javascript" src="../scripts/album-cover.js" defer></script>
+    
         <!-- Page Title -->
-        <title>Anatole Hernot — Photography</title>
-        <link rel="icon" href="../resources/images/favicon.jpg">
+        <title>AH - Photography (test page)</title>
+        
     </head>
 
 
@@ -31,38 +39,19 @@
         <!-- Header -->
         <header>
             
-            <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light fixed-top" role="navigation"> <!-- remove bg-light theme-->
-                <div class="container-fluid">
-                    <!-- Navbar title -->
-                    <a class="navbar-brand" href="../index.html">
-                        <h1>Anatole Hernot</h1>
+            <!-- Navigation Bar -->
+            <nav class="navbar-container" role="navigation">
+                <div class="navbar">
+                    <a href="../index.html" class="logo">
+                        <div class="logo-text">Anatole Hernot</div>
+                        <img src="../resources/images/logo.png" class="logo-img" alt="">
                     </a>
                     
-                    <!-- Button to expand mobile navbar -->
-                    <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"> <!--aria-haspopup="true"-->
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <!-- Navbar elements -->
-                    <div class="collapse navbar-collapse" id="navbarContent">
-                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-
-                            <li class="nav-item">
-                                <a class="nav-link" title="Home" href="../index.html">Home</a>
-                            </li>
-
-                            <li class="nav-item active">
-                                <a class="nav-link" title="Photography" href="#">Photography</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" title="Projects" href="./projects.html">Projects</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" title="Contact" href="./contact.html">Contact</a>
-                            </li>
-                        </ul>
+    
+                    <div class="navlink-container">
+                        <a href="./projects.html" class="navlink" title="Accueil">Projects</a>
+                        <a href="#" class="navlink active" title="Projets">Photography</a>
+                        <a href="./contact.html" class="navlink" title="Contact">About</a>
                     </div>
                 </div>
             </nav>
@@ -70,40 +59,119 @@
         </header>
 
 
+
+
+
         <!-- Main Body -->
         <main>
 
-            <!-- Page Title -->
-            <div class="page-title">
-                <h3>Photography</h3>
+
+            <div class="banner">
+                <div class="banner-text">
+                    Banner
+                </div>
             </div>
 
-            <br><br>
+                <!-- <div class="album-container col" id="album-1">
+                    <div class="image-container" id="image-container">
+                        <img src="../resources/images/sample/IMG_5612.JPG" alt=""></img>
+                        <a class="image-overlay" id="image-overlay" href="#">
+                            overlay text
+                        </a>                    
+                    </div>
+                    <a class="album-text" href="#">
+                        <h3 class="header">Album Title</h3>
+                        <p>short description</p>
+                    </a>
+                </div> -->
+
+
+            <div class="album-row">
+                
+                <div class="album-container col" id="album-1">
+                    <div class="image-container">
+                        <img src="../resources/images/sample/IMG_5612.JPG" alt=""></img>
+                        <a class="image-overlay" href="./albums/panoramas.html">
+                            <div class="overlay-text">
+                                Explore panoramic shots from around the world
+                            </div>
+                        </a>                    
+                    </div>
+                    <a class="album-text" href="./albums/panoramas.html">
+                        <h3 class="header">Panoramas Around The World</h3>
+                        <p>2021.02.22</p>
+                    </a>
+                </div>
+
+                <div class="album-container col" id="album-2">
+
+                    <div class="image-container">
+                        <img src="../resources/images/sample/IMG_5613.JPG" alt=""></img>
+                        <a class="image-overlay" href="#">
+                            overlay text
+                        </a>                        
+                    </div>
+    
+                    <a class="album-text" href="#">
+                        <h3 class="header">Urban Photography</h3>
+                        <p>short description</p>
+                    </a>
+    
+                </div>
+
+            </div>
+
+            <div class="album-row">
+                
+                <div class="album-container col" id="album-3">
+                    <div class="image-container">
+                        <img src="../resources/images/sample/IMG_5615.JPG" alt=""></img>
+                        <a class="image-overlay" href="#">
+                            overlay text
+                        </a>                    
+                    </div>
+                    <a class="album-text" href="#">
+                        <h3 class="header">Album 3</h3>
+                        <p>short description</p>
+                    </a>
+                </div>
+
+                <div class="album-container col" id="album-4">
+
+                    <div class="image-container">
+                        <img src="../resources/images/sample/IMG_5621.JPG" alt=""></img>
+                        <a class="image-overlay" href="#">
+                            overlay text
+                        </a>                        
+                    </div>
+    
+                    <a class="album-text" href="#">
+                        <h3 class="header">Album 4</h3>
+                        <p>short description</p>
+                    </a>
+    
+                </div>
+
+            </div>
+
             
 
-            <!-- Instagram Feed (Powered by Curator.io) -->
-            <section class="instagram-feed">
-                <p class="instagram-feed-description">
-                    Live Instagram feed of @anathrnt:<br><br>
-                </p>
 
-                <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
-                <script type="text/javascript">
-                    /* curator-feed-default-feed-layout */
-                    (function(){
-                        var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
-                        i.src = "https://cdn.curator.io/published/17c1e7c8-c861-4d60-977d-c0008850b0af.js";
-                        e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
-                    })();
-                </script>
-            </section>
+
+
+
+
+
+
+
+
 
         </main>
 
 
         <!-- Footer -->
         <footer>
-            <div class="footer-container">
+            <!-- <div class="footer-container">
                 <div class="row">
                     <div class="col-md-4 col-sm-4 col-xs-4">
                         <p class="text-center">
@@ -125,10 +193,10 @@
                     <div class="col-12">
                         &copy; Anatole Hernot 2021
                     </div>
-                </div>
+                </div> -->
             </div>
         </footer>
-        
+
     </body>
 
 </html>
