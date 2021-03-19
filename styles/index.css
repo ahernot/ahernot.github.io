@@ -1,5 +1,7 @@
 body {
     background: url("/resources/images/IMG_0053.JPG");
+    /* background: url("/resources/images/DJI_0613.JPG"); */
+    /* backdrop-filter: blur(2px); */
     background-position: 50% 20%;
     background-size: cover;
     overflow: hidden;
@@ -37,13 +39,13 @@ main {
     justify-content: center;
 }
 .item {
-    border-radius: 5px; 
+    /* border-radius: 5px;  */
     min-height: 100px;
     max-width: 500px;
     width: 45vw;
     margin: 10px;
 
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
     /* background-color: rgba(250, 124, 85, 0.3); */
     /* background-color: rgba(226, 19, 46, 0.425); */
 
@@ -56,13 +58,14 @@ main {
         /* box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5); */
         transition: 0.1s;
         border: 3px solid white;
-        background-color: rgba(255, 255, 255, 0.3);
+        /* color: black; */
+        background-color: rgba(255, 255, 255, 1);
     }
 
     .item-text {
         width: 100%;
         text-align: center;
-        color: black;
+        color: white;
 
         font-size: 35px;
 
