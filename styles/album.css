@@ -1,5 +1,18 @@
 /* NEED TO CENTER THE PANORAMA WIDTH- AND HEIGHT-WISE */
 
+.content-row {
+    overflow: hidden;
+}
+
+.content-row .image-info {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+        
+    border: 1px solid blue;
+}
+
 .content-container {
     width: 95vw;
     margin: auto;
@@ -23,32 +36,30 @@
     }
 
     @media (min-width: 750px) {
-        .content-container { overflow: hidden; }
+        .content-container {
+            /* overflow: hidden; */
+            /* overflow-x: scroll; always scroll actually */
+            /* overflow-y: hidden; */
+        }
     }
+
+
 
 
 .image-container {
     width: 100%;
     height: 30vw;
-    position: relative; /* position relative for 100% in children containers) */
-    border: 1px solid red;
+    position: relative;
 
-    /* overflow: hidden; */
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
     .image-container > img {
         position: absolute;
 
-        /* Set image size */
-        /* width: 100%; */
-        height: 100%; /* height will fill so will overflow in width; bug for small sizes */
+        height: 100%;
         min-width: 45vw;
         min-height: 30vw;
-        
-        /* Center anchor point */
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-        
-        /* border: 1px solid red; */
     }
     .image-container > .image-overlay {
         position: absolute;
@@ -61,7 +72,7 @@
         background-color: transparent;
         z-index: 1;
         text-align: center;
-
+        border: 1px solid pink;
     }
         @media (max-width: 750px) {
             .image-container > .image-overlay {
