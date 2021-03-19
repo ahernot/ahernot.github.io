@@ -49,7 +49,7 @@ for (var i = 0; i < items.length; i++) {
     item.addEventListener("mouseover", function(event) {
         // imageOverlay.classList.add("active");
         //sheet.insertRule('body { backdrop-filter: blur(2px); }', sheet.cssRules.length);
-        document.body.style.backdropFilter = "blur(3px)";
+        // document.body.style.backdropFilter = "blur(3px)";
         itemText.style.color = "black";
 
     });
@@ -58,7 +58,7 @@ for (var i = 0; i < items.length; i++) {
     item.addEventListener("mouseleave", function(event) {
         // imageOverlay[0].classList.remove("active");
         // sheet.insertRule('body { backdrop-filter: blur(0px) !important; }', sheet.cssRules.length);
-        document.body.style.backdropFilter = "";
+        // document.body.style.backdropFilter = "";
         itemText.style.color = "white";
     });
     
