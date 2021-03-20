@@ -1,0 +1,153 @@
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+    @media (max-width: 749px) {
+        .container {
+            flex-direction: column;
+        }
+        .content-col {
+            width: 100%;
+        }
+    }
+    .content-col {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+
+    }
+    @media (min-width: 750px) {
+        .content-col {
+            width: 50%;
+        }
+    }
+
+
+.content-container {
+    width: 100%;
+    position: relative;
+    /* margin-bottom: 40px; */
+    margin-bottom: 5vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* .content-col.col-left > .content-container {
+    justify-content: flex-end;
+    margin-bottom: 0px;
+}
+.content-col.col-right > .content-container {
+    justify-content: flex-start;
+    margin-bottom: 0px;
+} */
+
+
+.image-container {
+    /* width: 75vw; */
+    /* height: 30vw; */
+    position: relative;
+
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.4);
+}
+
+.image-container.w1-h1 {
+    width: 45vw;
+    height: 45vw;
+}
+.image-container.w3-h2 {
+    width: 45vw;
+    height: 30vw;
+}
+    @media (max-width: 749px) {
+        .image-container.w3-h2 {
+            width: 90vw;
+            height: 60vw;
+        }
+    }
+.image-container.w2-h3 {
+    width: 30vw;
+    height: 45vw;
+}
+    @media (max-width: 749px) {
+        .image-container.w2-h3 {
+            width: 90vw;
+            height: 135vw;
+        }
+    }
+.image-container.w4-h3 {
+    width: 45vw;
+    height: 33.75vw;
+}
+    @media (max-width: 749px) {
+        .image-container.w4-h3 {
+            width: 90vw;
+            height: 67.5vw;
+        }
+    }
+.image-container.w3-h4 {
+    width: 33.75vw;
+    height: 45vw;
+}
+    @media (max-width: 749px) {
+        .image-container.w3-h4 {
+            width: 90vw;
+            height: 120vw;
+        }
+    }
+.image-container.w16-h9 {
+    width: 45vw;
+    height: 25.3125vw;
+}
+    @media (max-width: 749px) {
+        .image-container.w16-h9 {
+            width: 90vw;
+            height: 50.625vw;
+        }
+    }
+.image-container.w9-h16 {
+    width: 25.3125vw;
+    height: 45vw;
+}
+    @media (max-width: 749px) {
+        .image-container.w9-h16 {
+            width: 90vw;
+            height: 160vw;
+        }
+    }
+
+.image-container.wide {
+    width: 45vw;
+    /*  */
+}
+
+    .image-container > img {
+        position: absolute;
+        height: 100%;
+
+        /* min-width: 45vw; */
+        /* min-height: 30vw; */
+    }
+
+    .image-container > .image-overlay {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: transparent;
+    }
+
+
+/* useless for now */
+.image-info {
+    display: block;
+    position: absolute;
+    top: 10px;
+    width: 19vw; /* leave space on left/right */
+}
