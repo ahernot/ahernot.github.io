@@ -102,26 +102,10 @@ main {
 header {
     margin-top: 25px;
     margin-bottom: 100px;
-
-    display: flex;
-    flex-direction: row;
 }
 
-.logo-img {
-    width: 7vw;
-    bottom: 0;
-}
-.header-text {
-    width: 86vw;
-    margin-right: 7vw;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
 
 .page-title {
-    /* width: 90vw; */
     text-align: center;
 }
     .page-title, .page-title > * {
@@ -147,7 +131,43 @@ header {
 footer {
     margin-top: 100px;
     margin-bottom: 15px;
+    
+    display: flex;
+    flex-direction: column;
 }
+
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+
+    margin-bottom: 20px;
+}
+    .footer-icon {
+        width: 30px;
+        height: 30px;
+        margin: 0 7px;
+        /* border: 1px solid green; */
+
+        position: relative;
+    }
+    .footer-icon > img {
+        display: none;
+
+        width: 28px;
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+
+    .footer-icon > .active {
+        display: block;
+    }
+
+
 .footer-copyright {
     text-align: center;
 }
