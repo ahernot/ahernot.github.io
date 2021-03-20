@@ -103,11 +103,12 @@ main {
 
 
 .page-title {
+    margin-top: 15px;
+    margin-bottom: 70px;
+
     text-align: center;
     font-size: 50px;
     font-weight: 500;
-    margin-top: 15px;
-    margin-bottom: 100px;
 }
     .page-title > * {
         text-decoration: none;
