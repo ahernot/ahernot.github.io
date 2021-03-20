@@ -99,18 +99,29 @@ main {
 
 
 
+header {
+    margin-top: 25px;
+    margin-bottom: 100px;
+}
 
 
 
 .page-title {
-    margin-top: 25px;
-    margin-bottom: 100px;
-
     text-align: center;
-    font-size: 50px;
-    font-weight: 500;
 }
-    .page-title > * {
+    .page-title, .page-title > * {
+        font-size: 50px;
+        font-weight: 500;
         text-decoration: none;
         color: black;
+    }
+
+.page-subtitle {
+    text-align: center;
+}
+    .page-subtitle, .page-subtitle > * {
+        font-size: 20px;
+        font-weight: 500;
+        text-decoration: none;
+        color: grey;
     }
