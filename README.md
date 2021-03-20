@@ -1,6 +1,9 @@
-# ahernot.github.io
+# ahernot.github.io (v2.0.1)
 
 <br><br>
+
+# To do (new)
+* add responsiveness to panoramas page
 
 # To do
 * add padding below carousel caption
