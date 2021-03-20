@@ -4,7 +4,7 @@
     width: 95vw;
     margin: auto;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 40px; /* 30px; */
 }
 
 .content-container {
@@ -75,8 +75,9 @@
 .image-info {
     display: block;
     position: absolute;
-    top: 0;
-    
+    /* top: 0; */
+    top: 10px;
+
     width: 19vw; /* leave space on left/right */
 }
 .content-container.image-left > .image-info {

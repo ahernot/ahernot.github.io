@@ -98,13 +98,11 @@ main {
 
 
 
-
+/* header */
 header {
     margin-top: 25px;
     margin-bottom: 100px;
 }
-
-
 
 .page-title {
     text-align: center;
@@ -125,3 +123,14 @@ header {
         text-decoration: none;
         color: grey;
     }
+
+
+
+/* Footer */
+footer {
+    margin-top: 100px;
+    margin-bottom: 15px;
+}
+.footer-copyright {
+    text-align: center;
+}
