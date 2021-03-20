@@ -169,5 +169,12 @@ footer {
 
 
 .footer-copyright {
+    color: var(--text-color-light);
     text-align: center;
 }
+    @media (prefers-color-scheme: light) {
+        .footer-copyright { color: var(--text-color-light); }
+    }
+    @media (prefers-color-scheme: dark) {
+        .footer-copyright { color: var(--text-color-dark); }
+    }
