@@ -4,6 +4,7 @@
 
 # To do (new)
 * add responsiveness to panoramas page
+* 4 rows in photo-album.css
 
 # To do
 * add padding below carousel caption
