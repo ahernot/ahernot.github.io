@@ -30,6 +30,13 @@
     --footer-text-dark: white;
     --footer-copyright-light: rgb(190, 190, 190);
     --footer-copyright-dark: rgb(43, 43, 43);
+
+
+    /* NEW COLORS */
+    --page-title-color-light: black;
+    --page-title-color-dark: white;
+    --page-subtitle-color-light: grey;
+    --page-subtitle-color-dark: white;
 }
 
 
@@ -112,7 +119,13 @@ header {
         font-size: 50px;
         font-weight: 500;
         text-decoration: none;
-        color: black;
+        color: var(--page-title-color-light);
+    }
+    @media (prefers-color-scheme: light) {
+        .page-title, .page-title > * { color: var(--page-title-color-light); }
+    }
+    @media (prefers-color-scheme: dark) {
+        .page-title, .page-title > * { color: var(--page-title-color-dark); }
     }
 
 .page-subtitle {
@@ -122,7 +135,13 @@ header {
         font-size: 20px;
         font-weight: 500;
         text-decoration: none;
-        color: grey;
+        color: var(--page-subtitle-color-light);
+    }
+    @media (prefers-color-scheme: light) {
+        .page-subtitle, .page-subtitle > * { color: var(--page-subtitle-color-light); }
+    }
+    @media (prefers-color-scheme: dark) {
+        .page-subtitle, .page-subtitle > * { color: var(--page-subtitle-color-dark); }
     }
 
 
