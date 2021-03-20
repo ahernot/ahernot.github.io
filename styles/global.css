@@ -102,9 +102,26 @@ main {
 header {
     margin-top: 25px;
     margin-bottom: 100px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-img {
+    width: 7vw;
+    bottom: 0;
+}
+.header-text {
+    width: 86vw;
+    margin-right: 7vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .page-title {
+    /* width: 90vw; */
     text-align: center;
 }
     .page-title, .page-title > * {
