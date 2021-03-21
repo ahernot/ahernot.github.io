@@ -7,6 +7,7 @@
 * 4 rows in photo-album.css
 * add a My Gear page
 * add EXIF watermark
+* add intro div
 
 # To do
 * add padding below carousel caption
