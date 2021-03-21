@@ -8,6 +8,7 @@
 * add a My Gear page
 * add EXIF watermark
 * add intro div
+* add timelapses on YouTube ?
 
 # To do
 * add padding below carousel caption
