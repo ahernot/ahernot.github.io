@@ -5,15 +5,12 @@
 # To do (new)
 * add responsiveness to panoramas page
 * 4 rows in photo-album.css
+* add a My Gear page
 
 # To do
 * add padding below carousel caption
 * add transparent container on top of carousel, becomes opaque when dark mode (and blurry when hover? or ZOOM when hover)
 * add gradient alpha background behind carousel caption
-* finalize favicon design with rounded corners
-* rename ./pages/ to ./html/
-* rename ./styles/ to ./css/
-* rename ./styles/common.css to ./css/styles.css
 
 * write "Anatole" in red
 
