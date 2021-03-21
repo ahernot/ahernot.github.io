@@ -6,6 +6,7 @@
 * add responsiveness to panoramas page
 * 4 rows in photo-album.css
 * add a My Gear page
+* add EXIF watermark
 
 # To do
 * add padding below carousel caption
