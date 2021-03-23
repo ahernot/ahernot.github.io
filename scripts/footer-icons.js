@@ -46,7 +46,6 @@ for (var i = 0; i < footerIcons.length; i++) {
 
     // Check if wrong icon for current theme (without theme update)
     darkMode = isDarkMode();
-    console.log(darkMode);
     if ((darkMode) && (iconMonoLight.classList.contains("active") >= 0)) {
         iconMonoLight.classList.remove("active");
         iconMonoDark.classList.add("active");
@@ -67,6 +66,20 @@ for (var i = 0; i < footerIcons.length; i++) {
 
     // Add mouseleave event
     iconContainer.addEventListener("mouseleave", function(event) {
+        darkMode = isDarkMode();
+
+        if (darkMode) {
+            iconMonoDark.classList.add("active");
+        } else { // light mode or media queries unsupported
+            iconMonoLight.classList.add("active");
+        }
+        iconColor.classList.remove("active");
+    });
+
+
+
+    // Add click event (https://stackoverflow.com/questions/8291517/disable-hover-effects-on-mobile-browsers)
+    iconContainer.addEventListener("click", function(event) {
         darkMode = isDarkMode();
 
         if (darkMode) {
