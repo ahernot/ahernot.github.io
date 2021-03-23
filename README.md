@@ -9,6 +9,9 @@
 * add EXIF watermark
 * add intro div
 * add timelapses on YouTube ?
+* change favicon.ico size to improve loading time
+* change image sizes to improve loading time
+
 
 # To do
 * add padding below carousel caption
