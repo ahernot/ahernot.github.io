@@ -42,7 +42,8 @@ main {
     /* border-radius: 5px;  */
     min-height: 100px;
     max-width: 500px;
-    width: 45vw;
+    /* width: 45vw; */
+    width: 35vw;
     margin: 10px;
 
     border: 2px solid white;
