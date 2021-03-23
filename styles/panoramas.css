@@ -88,3 +88,10 @@
     left: 0;
     text-align: right;
 }
+
+
+#panorama-2019-08-06_fuji-sunrise .image-container .image-overlay {
+    background-image: url("../resources/albums/panoramas/overlays/2019-08-06_fuji-sunrise_cropped-overlay.png");
+    background-size: cover;
+    /* background-color: red; */
+}
