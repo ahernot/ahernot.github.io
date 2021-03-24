@@ -8,7 +8,10 @@ for (var i = 0; i < imageContainers.length; i++) {
 
     // Mouseover event
     imageContainer.addEventListener("mouseover", function(event) {
-        imageOverlay[0].classList.add("active");
+        var windowWidth = window.innerWidth;
+        if (windowWidth >= 750) {
+            imageOverlay[0].classList.add("active");
+        }
     });
 
     // Mouseleave event
