@@ -15,5 +15,10 @@ for (var i = 0; i < imageContainers.length; i++) {
     imageContainer.addEventListener("mouseleave", function(event) {
         imageOverlay[0].classList.remove("active");
     });
+
+    // Click event
+    imageContainer.addEventListener("click", function(event) {
+        imageOverlay[0].classList.remove("active");
+    });
     
 };
