@@ -16,9 +16,11 @@ for (var i = 0; i < imageContainers.length; i++) {
         imageOverlay[0].classList.remove("active");
     });
 
-    // Click event
+    // Click event (with timeout)
     imageContainer.addEventListener("click", function(event) {
-        imageOverlay[0].classList.remove("active");
+        setTimeout(function () {
+            imageOverlay[0].classList.remove("active");
+        }, 300);
     });
     
 };

@@ -78,16 +78,19 @@ for (var i = 0; i < footerIcons.length; i++) {
 
 
 
-    // Add click event (https://stackoverflow.com/questions/8291517/disable-hover-effects-on-mobile-browsers)
+    // Add click event (https://stackoverflow.com/questions/8291517/disable-hover-effects-on-mobile-browsers) with timeout
     iconContainer.addEventListener("click", function(event) {
-        darkMode = isDarkMode();
-
-        if (darkMode) {
-            iconMonoDark.classList.add("active");
-        } else { // light mode or media queries unsupported
-            iconMonoLight.classList.add("active");
-        }
-        iconColor.classList.remove("active");
+        setTimeout(function () {
+        
+            darkMode = isDarkMode();
+            if (darkMode) {
+                iconMonoDark.classList.add("active");
+            } else { // light mode or media queries unsupported
+                iconMonoLight.classList.add("active");
+            }
+            iconColor.classList.remove("active");
+        
+        }, 300); 
     });
     
 };
