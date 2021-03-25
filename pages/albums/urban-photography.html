@@ -21,10 +21,11 @@
         <!-- Styles -->
         <link rel="stylesheet" href="../../styles/global.css">
         <link rel="stylesheet" href="../../styles/photo-album.css">
-        <link rel="stylesheet" href="../../styles/nav.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"> <!-- Bootstrap icons -->
+        <!-- <link rel="stylesheet" href="../../styles/nav.css"> -->
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"> Bootstrap icons -->
         
         <script type="text/javascript" src="../../scripts/footer-icons.js" defer></script>
+        <script type="text/javascript" src="../../scripts/album-overlay.js" defer></script>
     
         <!-- Page Title -->
         <title>AH - Urban Photography</title>
@@ -43,7 +44,7 @@
             </div>
 
             <div class="page-subtitle">
-                (SAMPLE IMAGES)
+                ADD A CAPTION
                 <!-- DIVE INTO LIFE-SIZED  -->
             </div>
 
@@ -64,98 +65,223 @@
 
                     <div class="content-container" id="image-1-1">
                         <div class="image-container w2-h3">
-                            <img src="../../resources/albums/urban-photography/sample-2-3-watermarked.JPG" alt=""></img>
-                            <div class="image-overlay"></div>                    
-                        </div>
-    
-                        <div class="image-info">
-                            <!-- Paris, France
-                            <br>
-                            2020.12.xx -->
+                            <img src="../../resources/albums/urban-photography/2019-08-02_montmartre-batignolles_original-watermarked.JPG" alt=""></img>
+                            <div class="image-overlay"></div>
+
+                            <div class="info-overlay">
+                                <div class="info-header">Paris, France</div>
+                                <div class="info-date">2019.08.02</div>
+
+                                <div class="info-camera">
+                                    <div class="setting-icon-container">
+                                        <img src="../../resources/icons/icon-camera.svg" class="info-icon"></img>
+                                    </div>
+                                    <div class="val">Canon EOS M50</div>
+                                </div>
+
+                                <ul class="info-settings">
+                                    <li>
+                                        <div class="setting-icon-container">
+                                            <img src="../../resources/icons/icon-iso-black.png" class="info-icon" alt="ISO">
+                                        </div>
+                                        <div class="val">0</div>
+                                    </li>
+                                    <li>
+                                        <div class="setting-icon-container">
+                                            <img src="../../resources/icons/icon-shutterspeed-black.png" class="info-icon" alt="Shutter Speed">
+                                        </div>
+                                        <div class="val">0</div>
+                                    </li>
+                                    <li>
+                                        <div class="setting-icon-container">
+                                            <img src="../../resources/icons/icon-aperture-black.png" class="info-icon" alt="Aperture">
+                                        </div>
+                                        <div class="val">f/0</div>
+                                    </li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
 
 
                     <div class="content-container" id="image-1-2">
                         <div class="image-container w3-h2">
-                            <img src="../../resources/albums/urban-photography/sample-3-2-watermarked.JPG" alt=""></img>
-                            <div class="image-overlay"></div>                    
-                        </div>
-    
-                        <div class="image-info">
-                            <!-- Paris, France
-                            <br>
-                            2020.12.xx -->
+                            <img src="../../resources/albums/urban-photography/2019-08-05_tokyo-street-night-1_original-watermarked.JPG" alt=""></img>
+                            <div class="image-overlay"></div>
+
+                            <div class="info-overlay">
+                                <div class="info-header">Tōkyō, Japan</div>
+                                <div class="info-date">2019.08.05</div>
+
+                                <div class="info-camera">
+                                    <div class="setting-icon-container">
+                                        <img src="../../resources/icons/icon-camera.svg" class="info-icon"></img>
+                                    </div>
+                                    <div class="val">Camera</div>
+                                </div>
+
+                                <ul class="info-settings">
+                                    <li>
+                                        <div class="setting-icon-container">
+                                            <img src="../../resources/icons/icon-iso-black.png" class="info-icon" alt="ISO">
+                                        </div>
+                                        <div class="val">0</div>
+                                    </li>
+                                    <li>
+                                        <div class="setting-icon-container">
+                                            <img src="../../resources/icons/icon-shutterspeed-black.png" class="info-icon" alt="Shutter Speed">
+                                        </div>
+                                        <div class="val">0</div>
+                                    </li>
+                                    <li>
+                                        <div class="setting-icon-container">
+                                            <img src="../../resources/icons/icon-aperture-black.png" class="info-icon" alt="Aperture">
+                                        </div>
+                                        <div class="val">f/0</div>
+                                    </li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
-
-
                 </div>
 
 
                 <div class="content-col col-right">
 
-                    <div class="content-container" id="image-1-3">
-                        <div class="image-container w4-h3">
-                            <img src="../../resources/albums/urban-photography/sample-4-3-watermarked.JPG" alt=""></img>
-                            <div class="image-overlay"></div>                    
-                        </div>
-    
-                        <div class="image-info">
-                            <!-- Paris, France
-                            <br>
-                            2020.12.xx -->
+                    <div class="content-container" id="image-2-1">
+                        <div class="image-container w2-h3">
+                            <img src="../../resources/albums/urban-photography/2019-08-05_tokyo-street-1-watermarked.JPG" alt=""></img>
+                            <div class="image-overlay"></div>
+                            <div class="info-overlay">
+                                <div class="info-header">Tōkyō, Japan</div>
+                                <div class="info-date">2019.08.05</div>
+
+                                <div class="info-camera">
+                                    <div class="setting-icon-container">
+                                        <img src="../../resources/icons/icon-camera.svg" class="info-icon"></img>
+                                    </div>
+                                    <div class="val">Camera</div>
+                                </div>
+
+                                <ul class="info-settings">
+                                    <li>
+                                        <div class="setting-icon-container">
+                                            <img src="../../resources/icons/icon-iso-black.png" class="info-icon" alt="ISO">
+                                        </div>
+                                        <div class="val">0</div>
+                                    </li>
+                                    <li>
+                                        <div class="setting-icon-container">
+                                            <img src="../../resources/icons/icon-shutterspeed-black.png" class="info-icon" alt="Shutter Speed">
+                                        </div>
+                                        <div class="val">0</div>
+                                    </li>
+                                    <li>
+                                        <div class="setting-icon-container">
+                                            <img src="../../resources/icons/icon-aperture-black.png" class="info-icon" alt="Aperture">
+                                        </div>
+                                        <div class="val">f/0</div>
+                                    </li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
 
-                    <div class="content-container" id="image-1-4">
-                        <div class="image-container w3-h4">
-                            <img src="../../resources/albums/urban-photography/sample-3-4-watermarked.JPG" alt=""></img>
-                            <div class="image-overlay"></div>                    
-                        </div>
-    
-                        <div class="image-info">
-                            <!-- Paris, France
-                            <br>
-                            2020.12.xx -->
+
+                    <div class="content-container" id="image-2-2">
+                        <div class="image-container w2-h3">
+                            <img src="../../resources/albums/urban-photography/2019-08-05_tokyo-height-2_original-watermarked.JPG" alt=""></img>
+                            <div class="image-overlay"></div>
+                            
+                            <div class="info-overlay">
+                                <div class="info-header">Tōkyō, Japan</div>
+                                <div class="info-date">2019.08.05</div>
+
+                                <div class="info-camera">
+                                    <div class="setting-icon-container">
+                                        <img src="../../resources/icons/icon-camera.svg" class="info-icon"></img>
+                                    </div>
+                                    <div class="val">Canon EOS M50</div>
+                                </div>
+
+                                <ul class="info-settings">
+                                    <li>
+                                        <div class="setting-icon-container">
+                                            <img src="../../resources/icons/icon-iso-black.png" class="info-icon" alt="ISO">
+                                        </div>
+                                        <div class="val">0</div>
+                                    </li>
+                                    <li>
+                                        <div class="setting-icon-container">
+                                            <img src="../../resources/icons/icon-shutterspeed-black.png" class="info-icon" alt="Shutter Speed">
+                                        </div>
+                                        <div class="val">0</div>
+                                    </li>
+                                    <li>
+                                        <div class="setting-icon-container">
+                                            <img src="../../resources/icons/icon-aperture-black.png" class="info-icon" alt="Aperture">
+                                        </div>
+                                        <div class="val">f/0</div>
+                                    </li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
 
-                    <div class="content-container" id="image-1-5">
-                        <div class="image-container w16-h9">
-                            <img src="../../resources/albums/urban-photography/sample-16-9-watermarked.JPG" alt=""></img>
-                            <div class="image-overlay"></div>                    
-                        </div>
-    
-                        <div class="image-info">
-                            <!-- Paris, France
-                            <br>
-                            2020.12.xx -->
+
+                    <div class="content-container" id="image-2-3">
+                        <div class="image-container w2-h3">
+                            <img src="../../resources/albums/urban-photography/2019-10-12_paris-policeman_original-watermarked.JPG" alt=""></img>
+                            <div class="image-overlay"></div>
+                            
+                            <div class="info-overlay">
+                                <div class="info-header">Paris, France</div>
+                                <div class="info-date">2019.10.12</div>
+
+                                <div class="info-camera">
+                                    <div class="setting-icon-container">
+                                        <img src="../../resources/icons/icon-camera.svg" class="info-icon"></img>
+                                    </div>
+                                    <div class="val">Canon EOS M50</div>
+                                </div>
+
+                                <ul class="info-settings">
+                                    <li>
+                                        <div class="setting-icon-container">
+                                            <img src="../../resources/icons/icon-iso-black.png" class="info-icon" alt="ISO">
+                                        </div>
+                                        <div class="val">0</div>
+                                    </li>
+                                    <li>
+                                        <div class="setting-icon-container">
+                                            <img src="../../resources/icons/icon-shutterspeed-black.png" class="info-icon" alt="Shutter Speed">
+                                        </div>
+                                        <div class="val">0</div>
+                                    </li>
+                                    <li>
+                                        <div class="setting-icon-container">
+                                            <img src="../../resources/icons/icon-aperture-black.png" class="info-icon" alt="Aperture">
+                                        </div>
+                                        <div class="val">f/0</div>
+                                    </li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
+
 
                 </div>
             </div>
 
 
-            <div class="content-row">
-
-                <!-- Image container -->
-                
-
-
-                
-
-
-
-
-            </div>
-
-
-
-            
-
         </main>
+
+
 
 
         <!-- Footer -->
@@ -195,7 +321,6 @@
 
         </footer>
 
-        
         
 
     </body>
