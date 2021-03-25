@@ -12,6 +12,10 @@
 * change favicon.ico size to improve loading time
 * change image sizes to improve loading time
 
+* todo quick:
+* fix image info container borders on mobile (make overflow all around)
+* when click back on mobile, hide again. and hide with animation too
+
 
 # To do
 * add padding below carousel caption
