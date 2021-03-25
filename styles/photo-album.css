@@ -149,7 +149,7 @@
     position: absolute;
     top: 0; right: -35%;
     width: 35%;
-    height: 100%;
+    height: 120%;
     z-index: 0;
     background-color: rgba(255, 255, 255, 0.9);
 }
@@ -168,13 +168,46 @@
         font-size: 22px;
         font-weight: 600;
     }
+        @media (max-width: 750px) {
+            .info-header {
+                font-size: 18px;
+            }
+        }
 
     .info-date {
         width: 90%;
         margin: 0 5% 0 5%;
     }
 
+    .info-settings {
+        list-style: none;
+        width: 90%;
+        margin: 50px 5% 0 5%;
+    }
+    .info-settings > li {
+        height: 35px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;   
+    }
+        .setting-icon-container {
+            flex: 1;
+            margin: auto;
+            overflow: hidden;
+        }
+            .setting-icon-container > img {
+                width: 25px;
+            }
+        .val {
+            flex: 2;
+            /* margin-left: 10px; */
+        }
+/* remove big gap between icon and val
+and check responsiveness with hiding icons and vals below set size 
+and add dark mode icons */
+
 .info-overlay.active {
     transition: 0.3s;
-    transform: translateX(-98%);
+    transform: translateX(-95%);
 }
