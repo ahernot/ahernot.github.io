@@ -1,0 +1,25 @@
+
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.video-frame {
+    margin-bottom: 20px;
+}
+.video-frame.w16-h9 {
+    width: 48vw;
+    height: 27vw;
+}
+.video-frame.w2-h1 {
+    width: 48vw;
+    height: 24vw;
+}
+
+.mask {
+    border: 1px solid red;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
