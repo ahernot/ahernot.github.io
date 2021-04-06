@@ -28,6 +28,11 @@ main {
     min-height: 80px;
     text-align: center;
 }
+@media (min-width: 700px) {
+    #intro-message {
+        font-size: 60px;
+    }
+}
 
 #introduction {
     /* height: 1000px; */
@@ -120,6 +125,7 @@ main {
     margin-top: 10px;
     margin-bottom: 10px;
     border-top: 3px solid black;
+    /* border-top: 3px solid white; */
 }
 
 
