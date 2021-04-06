@@ -110,6 +110,18 @@ header {
     margin-top: 25px;
     margin-bottom: 100px;
 }
+header.m-50 {
+    margin-bottom: 50px;
+}
+header.m-70 {
+    margin-bottom: 70px;
+}
+header.m-80 {
+    margin-bottom: 80px;
+}
+header.m-90 {
+    margin-bottom: 90px;
+}
 
 
 .page-title {
