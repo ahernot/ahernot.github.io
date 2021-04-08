@@ -6,9 +6,10 @@ Image processing and watermarking utility.
 @version: 0.0.1
 """
 
-
 import preferences
+import batch
 
 
 if __name__ == '__main__':
-    pass
+
+    batch.run(path=preferences.SOURCE_PATH)
