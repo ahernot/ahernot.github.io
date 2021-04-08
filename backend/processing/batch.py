@@ -1,41 +1,52 @@
+#!/usr/bin/env python
 
 import os
 import posix
 
+from process_logger import Logger
 
 
 DIRPATH = '/Users/anatole/Desktop/website-resources/street-photography'
+
+
+# Initialise logger
+logger = Logger(DIRPATH)
+
 with os.scandir(DIRPATH) as albums:
-    
     for album in albums:
 
+        # Check if album is directory
         if not album.is_dir():
             continue
 
-        with os.scandir(album.path) as images:
+        with os.scandir(album.path) as files:
+            for file in files:
+
+                # CONTINUE if not image file
+
+                # Check if already processed
+                if logger.is_processed(album.name, file.name):
+                    continue
+
+                # read exif data
+
+                # watermark and save all in destination path
+
+                # save json info in destination
+
+                # Log as processed
+                logger.log_processed(album.name, file.name)
+
+# Write log
+logger.save()
 
 
-            # CONTINUE if not image file
+"""
+fileName = file.name
+filePath = file.path
 
-            # CONTINUE if already processed
-            # >> single JSON file in ROOT folder
-
-            # read exif data
-
-            # watermark and save all in destination path
-
-            # save json info in destination
-
-            # log as already processed
-
-            pass
-
-        """
-        fileName = file.name
-        filePath = file.path
-
-        exif = file.exif
-        """
+exif = file.exif
+"""
 
 
 class Batch:
