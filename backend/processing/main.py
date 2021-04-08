@@ -6,10 +6,17 @@ Image processing and watermarking utility.
 @version: 0.0.1
 """
 
+import os
+
 import preferences
 import batch
 
 
 if __name__ == '__main__':
+
+    # Change path to ~/backend/processing/
+    abspath = os.path.abspath(__file__)
+    dname = os.path.dirname(abspath)
+    os.chdir(dname)
 
     batch.run(path=preferences.SOURCE_PATH)
