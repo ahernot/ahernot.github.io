@@ -2,16 +2,16 @@ import json
 
 class Logger:
 
-    def __init__(self, dirpath):
+    def __init__(self, dirpath: str):
         self.log_path = f'{dirpath}/processed.json'
         
         with open(self.log_path, 'r', encoding='utf-8') as log:
             self.__log = json.load( log.read() )
 
-    def is_processed(self, album, file):
+    def is_processed(self, album: str, file: str):
         return file in self.__log[album]
 
-    def log_processed(self, album, file):
+    def log_processed(self, album: str, file: str):
 
         if album in self.__log:
             if file not in self.__log[album]:
