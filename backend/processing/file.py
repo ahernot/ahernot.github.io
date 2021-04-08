@@ -1,30 +1,23 @@
 import posix
 import os
 
+
 import exif
+from exiftool import ExifTool
 
 
 
-class MediaFile():
+class MediaFile:
 
     def __init__(self, dirEntry: posix.DirEntry):
 
         self.name = dirEntry.name
         self.path = dirEntry.path
-        self.extension = os.path.splitext(self.path)
+        self.extension = os.path.splitext(self.path) [1] [1:]
+        self.exif = self.__get_exif()
 
-        self.exif = dict()
-
-    @property
-    def exif(self):
-        return self.__exif
-
-    @exif.setter
-    def exif(self, val):
-        self.__exif = val  # CALL EXIF READER
-
-
-CDE = CustomDirEntry()
-print(CDE.exif)
-CDE.exif = 10
-print(CDE.exif)
+    def __get_exif(self):
+        with ExifTool() as e:
+            metadata = e.get_metadata(self.path)
+        return metadata[0]
+        
