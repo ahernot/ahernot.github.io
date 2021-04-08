@@ -1,8 +1,6 @@
 import posix
 import os
 
-
-import exif
 from exiftool import ExifTool
 
 
