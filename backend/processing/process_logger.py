@@ -25,10 +25,3 @@ class Logger:
     def save(self):
         with open(self.log_path, 'w', encoding='utf-8') as log:
             json.dump( self.__log, log, indent=4 )
-
-
-L = Logger('/Users/anatole/Desktop/website-resources/')
-val = L.is_processed('sample album', 'image 1')
-print(val)
-L.log_processed('new album', 'img')
-L.save()
