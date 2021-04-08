@@ -6,39 +6,40 @@ import posix
 from process_logger import Logger
 
 
-DIRPATH = '/Users/anatole/Desktop/website-resources/street-photography'
 
 
-# Initialise logger
-logger = Logger(DIRPATH)
+def run(path):
 
-with os.scandir(DIRPATH) as albums:
-    for album in albums:
+    # Initialise logger
+    logger = Logger(path)
 
-        # Check if album is directory
-        if not album.is_dir():
-            continue
+    with os.scandir(path) as albums:
+        for album in albums:
 
-        with os.scandir(album.path) as files:
-            for file in files:
+            # Check if album is directory
+            if not album.is_dir():
+                continue
 
-                # CONTINUE if not image file
+            with os.scandir(album.path) as files:
+                for file in files:
 
-                # Check if already processed
-                if logger.is_processed(album.name, file.name):
-                    continue
+                    # CONTINUE if not image file
 
-                # read exif data
+                    # Check if already processed
+                    if logger.is_processed(album.name, file.name):
+                        continue
 
-                # watermark and save all in destination path
+                    # read exif data
 
-                # save json info in destination
+                    # watermark and save all in destination path
 
-                # Log as processed
-                logger.log_processed(album.name, file.name)
+                    # save json info in destination
 
-# Write log
-logger.save()
+                    # Log as processed
+                    logger.log_processed(album.name, file.name)
+
+    # Write log
+    logger.save()
 
 
 """
