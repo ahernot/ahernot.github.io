@@ -34,11 +34,13 @@ main {
 
 .social-link {
     width: 80%;
-    height: 50px;
+    height: 65px;
     margin: auto;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -51,21 +53,23 @@ main {
             width: 95vw;
         }
     }
-
-.social-link:hover {
-    transition: 0.3s;
-    background-color: rgb(48, 48, 48);
-    border: 2px solid black;
-}
-#youtube-link:hover {
-    background-color: red;
-    border: 2px solid rgb(180, 0, 0);
-}
-
-.social-link:hover > .link-text {
-    transition: 0.3s;
-    color: white;
-}
+    .social-link:hover {
+        transition: 0.3s;
+        background-color: rgb(48, 48, 48);
+        border: 2px solid black;
+    }
+    .social-link.youtube-link:hover {
+        background-color: red;
+        border: 2px solid rgb(180, 0, 0);
+    }
+    .social-link.instagram-link:hover {
+        background-color: rgb(253, 20, 78);
+        border: 2px solid rgb(255, 0, 212);
+    }
+    .social-link.website-link:hover {
+        background-color: rgb(33, 0, 110);
+        border: 2px solid rgb(41, 0, 75);
+    }
 
 .social-link > .link-text {
     text-decoration: none;
@@ -73,13 +77,54 @@ main {
     font-size: 20px;
     color: black;
 }
-@media (max-width: 450px) {
-    .social-link > .link-text {
-        font-size: 18px;
+    @media (max-width: 450px) {
+        .social-link > .link-text {
+            font-size: 18px;
+        }
     }
+    .social-link:hover > .link-text {
+        transition: 0.3s;
+        color: white;
+    }
+
+.social-link > .link-subtext {
+    font-size: 14px;
+    color: grey;
 }
+.social-link:hover > .link-subtext {
+    transition: 0.3s;
+    color: white;
+}
+
+
+
+.social-link.inactive {
+    /* background-color: rgb(220, 220, 220); */
+    border: 2px solid rgb(173, 173, 173);
+}
+    .social-link.inactive > .link-text {
+        color: rgb(173, 173, 173);
+    }
+    .social-link.inactive:hover {
+        background-color: transparent;
+        border: 2px solid rgb(173, 173, 173);
+    }
 
 .spacer {
     height: 30px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
+
+.disclaimer {
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(92, 92, 92);
+
+    margin: 65px 0 15px 0;
+}
+    @media (max-width: 450px) {
+        .disclaimer {
+            font-size: 18px;
+        }
+    }
