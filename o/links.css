@@ -1,8 +1,8 @@
 
 *{ margin: 0px; padding: 0px; box-sizing: border-box; }
 
-/* Prevent scrolling */
-html, body { max-width: 100%; overflow-x: hidden; overflow-y: hidden;}
+/* Prevent x-axis scrolling */
+html, body { max-width: 100%; overflow-x: hidden;}
 
 
 /* Set fonts */
