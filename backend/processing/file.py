@@ -1,15 +1,17 @@
 import posix
+import os
 
 import exif
 
 
 
-class CustomDirEntry():
+class MediaFile():
 
     def __init__(self, dirEntry: posix.DirEntry):
 
         self.name = dirEntry.name
         self.path = dirEntry.path
+        self.extension = os.path.splitext(self.path)
 
         self.exif = dict()
 
