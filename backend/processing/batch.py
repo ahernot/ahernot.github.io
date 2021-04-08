@@ -2,10 +2,12 @@
 
 import os
 import posix
+import json #TEMP
 
 import preferences
 from process_logger import Logger
 from file import MediaFile
+import exif_formatter
 
 
 
@@ -40,9 +42,22 @@ def run(path: str):
                     if logger.is_processed(album.name, media_file.name):
                         continue
 
-                    # TODO: read exif data and save json in destination path
+                    # Generate destination path
+                    dest_path = f'../../resources/albums/_tests/{album.name}/'
+                    try:
+                        os.makedirs(dest_path)
+                    except FileExistsError:
+                        pass
 
                     # TODO: watermark and save all in destination path
+                    #####
+
+                    # Read exif data and save json in destination path
+                    exif_dict = exif_formatter.generate_image_dictionary( media_file.exif )
+
+                    json_name = f'{media_file.name}.json'
+                    with open(dest_path + json_name, 'w', encoding='utf-8') as dump:
+                        json.dump(exif_dict, dump, indent=4)
 
                     # Log file as processed
                     logger.log_processed(album.name, media_file.name)
@@ -50,4 +65,4 @@ def run(path: str):
     # Write log
     logger.save()
 
-# watermarking program will be pulled from my watermarking utility
+# watermarking program will be copied over from my watermarking utility
