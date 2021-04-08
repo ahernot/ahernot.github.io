@@ -3,12 +3,14 @@
 import os
 import posix
 
+import preferences
 from process_logger import Logger
+from file import MediaFile
 
 
 
 
-def run(path):
+def run(path: str):
 
     # Initialise logger
     logger = Logger(path)
@@ -23,38 +25,24 @@ def run(path):
             with os.scandir(album.path) as files:
                 for file in files:
 
-                    # CONTINUE if not image file
+                    # Create MediaFile object
+                    media_file = MediaFile(file)
 
-                    # Check if already processed
-                    if logger.is_processed(album.name, file.name):
+                    # Check image file type
+                    if media_file.extension not in preferences.EXTENSIONS:
                         continue
 
-                    # read exif data
+                    # Check if already processed
+                    if logger.is_processed(album.name, media_file.name):
+                        continue
 
-                    # watermark and save all in destination path
+                    # TODO: read exif data and save json in destination path
 
-                    # save json info in destination
+                    # TODO: watermark and save all in destination path
 
-                    # Log as processed
-                    logger.log_processed(album.name, file.name)
+                    # Log file as processed
+                    logger.log_processed(album.name, media_file.name)
 
     # Write log
     logger.save()
-
-
-"""
-fileName = file.name
-filePath = file.path
-
-exif = file.exif
-"""
-
-
-class Batch:
-
-    def __init__(self, path):
-        pass
-
-    def process(self):
-        pass
 
