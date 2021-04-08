@@ -46,3 +46,4 @@ def run(path: str):
     # Write log
     logger.save()
 
+# watermarking program will be pulled from my watermarking utility
