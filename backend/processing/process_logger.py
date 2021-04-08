@@ -5,11 +5,20 @@ class Logger:
     def __init__(self, dirpath: str):
         self.log_path = f'{dirpath}/processed.json'
         
-        with open(self.log_path, 'r', encoding='utf-8') as log:
-            self.__log = json.load( log.read() )
+        try:
+            with open(self.log_path, 'r', encoding='utf-8') as log:
+                self.__log = json.load( log )
+
+        except FileNotFoundError:
+            self.__init_log()
+            self.__log = dict()
+
+    def __init_log(self):
+        with open(self.log_path, 'w', encoding='utf-8') as log:
+            log.write('{}')
 
     def is_processed(self, album: str, file: str):
-        return file in self.__log[album]
+        return (album in self.__log) and (file in self.__log[album])
 
     def log_processed(self, album: str, file: str):
 
