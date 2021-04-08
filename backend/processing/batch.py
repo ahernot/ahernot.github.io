@@ -25,11 +25,15 @@ def run(path: str):
             with os.scandir(album.path) as files:
                 for file in files:
 
+                    # Check path type
+                    if not file.is_file():
+                        continue
+
                     # Create MediaFile object
                     media_file = MediaFile(file)
 
                     # Check image file type
-                    if media_file.extension not in preferences.EXTENSIONS:
+                    if (media_file.extension).lower() not in preferences.EXTENSIONS:
                         continue
 
                     # Check if already processed
