@@ -3,8 +3,6 @@ import os
 
 from exiftool import ExifTool
 
-
-
 class MediaFile:
 
     def __init__(self, dirEntry: posix.DirEntry):
