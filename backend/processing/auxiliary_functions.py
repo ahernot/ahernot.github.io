@@ -2,7 +2,10 @@ import os
 import cv2
 import numpy as np
 
-def generate_dir(dirpath: str):
+# DO NOT IMPORT PREFERENCES
+
+
+def generate_dirs(dirpath: str):
     try:
         os.makedirs(dirpath)
     except FileExistsError:
@@ -22,7 +25,6 @@ def imread_rgba(path):
             axis=2
         )
     return img
-
 
 class FloorDict:
     """
