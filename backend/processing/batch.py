@@ -7,9 +7,9 @@ import json #TEMP
 import preferences
 from process_logger import Logger
 from file import MediaFile
-from watermarker import ImageLayered
+from watermarker import WebsiteImage, ImageLayered
 from exif_formatter import ExifDict
-import auxiliary_functions
+from auxiliary_functions import generate_dirs, imread_rgba
 
 
 
@@ -45,11 +45,18 @@ def run(path: str):
 
                     # Generate destination path
                     dest_path = f'../../resources/albums/_tests/{album.name}/'
-                    auxiliary_functions.generate_dir( dest_path )
+                    generate_dirs( dest_path )
 
-                    # TODO: watermark and save all in destination path
-                    img = ImageLayered(  )
-                    #img.add_watermark()
+                    # Resize image
+                    img_r = WebsiteImage( media_file.path )
+                    img_r.resize()
+
+                    # Watermark image and save all
+                    img_w = ImageLayered( img_r.image )
+                    watermark = imread_rgba( '/Users/anatole/Downloads/watermarks/watermark-white.tiff' )
+                    for watermark_info in preferences.WATERMARKS:
+                        img_w.add_watermark(watermark, *watermark_info)
+                    img_w.export(dirpath=dest_path+'out/')
 
                     # Read exif data and save json in destination path
                     exif = ExifDict( media_file.exif )
