@@ -17,7 +17,7 @@ EXIF_TAGS = {
     'settingFNumber': ['EXIF:FNumber'],
     'settingFocalLength': ['EXIF:FocalLength'],
 
-    #'aspectRatio': '3:2',
+    #'aspectRatio': '3:2',  # tuple now
     #'imageWidth': 600,
     #'imageHeight': 400,
     #'megapixels': 600 * 400,
@@ -31,12 +31,11 @@ def generate_image_dictionary(metadata: dict):
 
     exif_dict = dict()
 
-    exif_dict['fileName'] = ''
+    exif_dict['fileNameOriginal'] = ''
     exif_dict['fileSize'] = ''  # after postprocessing
     exif_dict['filePathOriginal'] = ''
 
     exif_dict['author'] = 'Anatole Hernot'
-    exif_dict['dateFormatted'] = ''
     exif_dict['location'] = 'Unknown Location'
     #exif_dict['tags'] = ['tag']
 
@@ -53,6 +52,9 @@ def generate_image_dictionary(metadata: dict):
         
         exif_dict[tag] = val
 
+    # dateFormatted
+    exif_dict['dateFormatted'] = ''
+
 
     # settingShutterSpeed
     try:
@@ -62,9 +64,13 @@ def generate_image_dictionary(metadata: dict):
     except:
         exif_dict['settingShutterSpeedSeconds'] = None
 
-
-    #'aspectRatio': '3:2',
-    #'imageWidth': 600,
+    # aspectRatio
+    try:
+        ar_frac = Fraction(exif_dict['imageWidthOriginal'], exif_dict['imageHeightOriginal']) .limit_denominator(10**5)
+        exif_dict['aspectRatio'] = (ar_frac.numerator, ar_frac.denominator)
+    except:
+        exif_dict['aspectRatio'] = None
+    
     #'imageHeight': 400,
     #'megapixels': 600 * 400,
 
