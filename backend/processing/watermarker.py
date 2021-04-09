@@ -3,11 +3,26 @@ import cv2
 
 from auxiliary_functions import clamp, imread_rgba
 
+"""
+rename watermarker.py to image.py
+"""
 
-# add min width, min height for watermark
 
-# TODO: keep alpha in IMAGE after merge
-# image here is already resized
+class Image:
+
+    def __init__(self, path: str):
+        #
+        pass
+
+    def resize(self):
+        pass
+        # resize according to size directions and aspect ratio
+
+
+
+
+
+# TODO: Add min width, min height for watermark
 class ImageLayered:
 
     def __init__(self, image: np.ndarray):
@@ -105,8 +120,7 @@ class ImageLayered:
         mask = np.zeros_like(self.__image, dtype=np.uint8)
         mask[w_range_y_start:w_range_y_stop, w_range_x_start:w_range_x_stop, :] = self.__original[w_range_y_start:w_range_y_stop, w_range_x_start:w_range_x_stop, :]
         self.__masks .append(mask)
-
-        
+   
     def __merge_above_image(self, layer: np.ndarray, opacity: float):
 
         threshold = 0.1
@@ -135,7 +149,6 @@ class ImageLayered:
         # Modify image
         self.__image = (layer_transp + image_transp) .astype(np.uint8)
 
-
     def export(self, dirpath):
         # TODO: EXIF WATERMARK
 
@@ -148,7 +161,7 @@ class ImageLayered:
 
 
 
-
+"""
 watermark = cv2.imread('/Users/anatole/Downloads/watermarks/watermark-white.tiff', cv2.IMREAD_UNCHANGED)
 image = imread_rgba('/Users/anatole/Desktop/website-resources/_sampleDir/_sampleAlbum/IMG_8503.JPG')
 
@@ -157,3 +170,4 @@ i.add_watermark(watermark, 0.1, 0.0, 1.0, 0.3)
 i.add_watermark(watermark, 0.1, 0.5, 0.5, 0.3)
 i.add_watermark(watermark, 0.1, 1.0, 0.0, 0.3)
 i.export('./backend/processing/out/')
+"""
