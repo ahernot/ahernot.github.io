@@ -7,6 +7,7 @@ import json #TEMP
 import preferences
 from process_logger import Logger
 from file import MediaFile
+from watermarker import ImageLayered
 from exif_formatter import ExifDict
 import auxiliary_functions
 
@@ -47,7 +48,8 @@ def run(path: str):
                     auxiliary_functions.generate_dir( dest_path )
 
                     # TODO: watermark and save all in destination path
-                    #####
+                    img = ImageLayered(  )
+                    #img.add_watermark()
 
                     # Read exif data and save json in destination path
                     exif = ExifDict( media_file.exif )
@@ -61,3 +63,5 @@ def run(path: str):
     del logger
 
 # watermarking program will be copied over from my watermarking utility
+# random opacity in range (0.3-0.8) for watermark?
+# random opacity for mask?
