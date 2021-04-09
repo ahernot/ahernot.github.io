@@ -150,7 +150,8 @@
     top: 0; right: -35%;
     width: 35%;
     height: 120%;
-    z-index: 0;
+    /* z-index: 0; */
+    z-index: 2;
     background-color: rgba(255, 255, 255, 0.9);
 }
     @media (prefers-color-scheme: light) {
@@ -239,4 +240,20 @@ and add dark mode icons */
 .info-overlay.active {
     transition: 0.3s;
     transform: translateX(-95%);
+}
+
+
+
+/* TEST */
+#image-1-1 .image-container #overlay-1 {
+    background-image: url("../resources/albums/urban-photography/2019-08-02_montmartre-batignolles_original-watermarked-mask0.png");
+    background-size: cover;
+}
+#image-1-1 .image-container #overlay-2 {
+    background-image: url("../resources/albums/urban-photography/2019-08-02_montmartre-batignolles_original-watermarked-mask1.png");
+    background-size: cover;
+}
+#image-1-1 .image-container #overlay-3 {
+    background-image: url("../resources/albums/urban-photography/2019-08-02_montmartre-batignolles_original-watermarked-mask2.png");
+    background-size: cover;
 }

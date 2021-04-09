@@ -7,7 +7,7 @@ import json #TEMP
 import preferences
 from process_logger import Logger
 from file import MediaFile
-from watermarker import WebsiteImage, ImageLayered
+from image import WebsiteImage, ImageLayered
 from exif_formatter import ExifDict
 from auxiliary_functions import generate_dirs, imread_rgba
 
