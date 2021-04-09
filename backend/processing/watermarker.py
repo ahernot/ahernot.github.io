@@ -1,7 +1,8 @@
 import numpy as np
 import cv2
 
-from auxiliary_functions import clamp, imread_rgba
+import preferences
+from auxiliary_functions import clamp, imread_rgba, generate_dirs
 
 """
 rename watermarker.py to image.py
@@ -11,14 +12,26 @@ rename watermarker.py to image.py
 class WebsiteImage:
 
     def __init__(self, path: str):
-        #
-        pass
+        self.image = imread_rgba(path)
+        self.height, self.width, self.depth = (self.image).shape
+        self.ratio = self.width / self.height
+        # CHECK EXIF FOR ROTATION!!!!!!
+
+    def __round(self, i):
+        return round(i)
 
     def resize(self):
-        pass
-        # resize according to size directions and aspect ratio
+        new_size = preferences.SIZES_FD [self.ratio]
 
+        if self.ratio >= 1.0:  # apply to width
+            new_width = new_size
+            new_height = self.__round( new_width / self.ratio )
+        
+        else:  # apply to height
+            new_height = new_size
+            new_width = self.__round( new_height * self.ratio )
 
+        self.image = cv2.resize(self.image, (new_width, new_height), interpolation=cv2.INTER_AREA)
 
 
 
@@ -85,9 +98,9 @@ class ImageLayered:
 
         # Calculate range bounding box
         w_range_x_start = w_center_x - half_width  # trim watermark if less than 0
-        w_range_x_stop = w_center_x + half_width  # trim watermark if more than self.width
+        w_range_x_stop = w_range_x_start + new_width  # trim watermark if more than self.width
         w_range_y_start = w_center_y - half_height
-        w_range_y_stop = w_center_y + half_height
+        w_range_y_stop = w_range_y_start + new_height
 
         # Safeguard: trim watermark if out of bounds
         if w_range_y_start < 0:
@@ -151,6 +164,9 @@ class ImageLayered:
 
     def export(self, dirpath):
         # TODO: EXIF WATERMARK
+
+        # Generate directories
+        generate_dirs(dirpath)
 
         # Save image
         cv2.imwrite(dirpath + 'img.png', self.__image)
