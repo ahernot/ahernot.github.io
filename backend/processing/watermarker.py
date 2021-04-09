@@ -4,6 +4,8 @@ import cv2
 from auxiliary_functions import clamp, imread_rgba
 
 
+# add min width, min height for watermark
+
 # TODO: keep alpha in IMAGE after merge
 # image here is already resized
 class ImageLayered:
@@ -29,7 +31,7 @@ class ImageLayered:
         # Clamp values in [0., 1.]
         size = clamp(size, 0., 1.)
         x_position = clamp(x_position, 0., 1.)
-        y_position = clamp(x_position, 0., 1.)
+        y_position = clamp(y_position, 0., 1.)
 
         # Unpack measurements
         w_height, w_width, w_depth = watermark.shape
@@ -91,16 +93,18 @@ class ImageLayered:
             w_range_x_stop = self.width
         
 
+
         # Generate watermark layer
         watermark_layer = np.zeros_like(self.__image, dtype=np.uint8)
-        #watermark_layer[:, :, 3] = 0
         watermark_layer[w_range_y_start:w_range_y_stop, w_range_x_start:w_range_x_stop, :] = watermark_resized
-        #cv2.imwrite('ouuut.png', watermark_layer)
 
         # Merge layers
         self.__merge_above_image(watermark_layer, opacity)
 
         # Export mask
+        mask = np.zeros_like(self.__image, dtype=np.uint8)
+        mask[w_range_y_start:w_range_y_stop, w_range_x_start:w_range_x_stop, :] = self.__original[w_range_y_start:w_range_y_stop, w_range_x_start:w_range_x_stop, :]
+        self.__masks .append(mask)
 
         
     def __merge_above_image(self, layer: np.ndarray, opacity: float):
@@ -133,23 +137,23 @@ class ImageLayered:
 
 
     def export(self, dirpath):
-
         # TODO: EXIF WATERMARK
 
         # Save image
         cv2.imwrite(dirpath + 'img.png', self.__image)
-
         
-        # export all masks
-
-        pass
-
-
+        # Export all masks
+        for mask_id, mask in enumerate(self.__masks):
+            cv2.imwrite(dirpath + f'mask{mask_id}.png', mask)
 
 
-watermark = cv2.imread('./backend/processing/watermark-white.tiff', cv2.IMREAD_UNCHANGED)
-image = imread_rgba('./backend/processing/IMG_8503.JPG')
+
+
+watermark = cv2.imread('/Users/anatole/Downloads/watermarks/watermark-white.tiff', cv2.IMREAD_UNCHANGED)
+image = imread_rgba('/Users/anatole/Desktop/website-resources/_sampleDir/_sampleAlbum/IMG_8503.JPG')
 
 i = ImageLayered(image)
-i.add_watermark(watermark, 0.3, 0, 0, 0.3)
-i.export('')
+i.add_watermark(watermark, 0.1, 0.0, 1.0, 0.3)
+i.add_watermark(watermark, 0.1, 0.5, 0.5, 0.3)
+i.add_watermark(watermark, 0.1, 1.0, 0.0, 0.3)
+i.export('./backend/processing/out/')
