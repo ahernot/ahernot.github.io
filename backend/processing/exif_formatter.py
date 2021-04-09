@@ -75,3 +75,15 @@ def generate_image_dictionary(metadata: dict):
         exif_dict['megapixelsOriginal'] = None
 
     return exif_dict
+
+
+
+class ExifDict:
+
+    def __init__(self, metadata: dict):
+        self.data = generate_image_dictionary(metadata)
+
+    def save(self, dirpath: str):
+        json_name = os.splitext( self.data['fileName']  ) [0] + '.json'
+        with open(dirpath + json_name, 'w', encoding='utf-8') as dump:
+            json.dump(exif_dict, dump, indent=4)
