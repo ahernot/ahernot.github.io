@@ -7,8 +7,8 @@ import json #TEMP
 import preferences
 from process_logger import Logger
 from file import MediaFile
-import exif_formatter
-
+from exif_formatter import ExifDict
+import auxiliary_functions
 
 
 
@@ -44,25 +44,20 @@ def run(path: str):
 
                     # Generate destination path
                     dest_path = f'../../resources/albums/_tests/{album.name}/'
-                    try:
-                        os.makedirs(dest_path)
-                    except FileExistsError:
-                        pass
+                    auxiliary_functions.generate_dir( dest_path )
 
                     # TODO: watermark and save all in destination path
                     #####
 
                     # Read exif data and save json in destination path
-                    exif_dict = exif_formatter.generate_image_dictionary( media_file.exif )
-
-                    json_name = f'{media_file.name}.json'
-                    with open(dest_path + json_name, 'w', encoding='utf-8') as dump:
-                        json.dump(exif_dict, dump, indent=4)
+                    with ExifDict(media_file.exif) as exif:
+                        exif.save(dirpath=dest_path)
 
                     # Log file as processed
                     logger.log_processed(album.name, media_file.name)
 
     # Write log
     logger.save()
+    del logger
 
 # watermarking program will be copied over from my watermarking utility
