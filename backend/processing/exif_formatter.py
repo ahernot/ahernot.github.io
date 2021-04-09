@@ -1,4 +1,7 @@
+import os
+import json
 from fractions import Fraction
+
 
 # dictionary with """ newKey: [oldKey1, oldKey2, …] """
 EXIF_TAGS = {
@@ -31,7 +34,7 @@ def generate_image_dictionary(metadata: dict):
 
     exif_dict = dict()
 
-    exif_dict['fileNameOriginal'] = ''
+    exif_dict['fileNameOriginal'] = 'myFile'
     exif_dict['fileSize'] = ''  # after postprocessing
     exif_dict['filePathOriginal'] = ''
 
@@ -90,6 +93,6 @@ class ExifDict:
         self.data = generate_image_dictionary(metadata)
 
     def save(self, dirpath: str):
-        json_name = os.splitext( self.data['fileName']  ) [0] + '.json'
+        json_name = os.path.splitext( self.data['fileNameOriginal']  ) [0] + '.json'
         with open(dirpath + json_name, 'w', encoding='utf-8') as dump:
-            json.dump(exif_dict, dump, indent=4)
+            json.dump(self.data, dump, indent=4)
