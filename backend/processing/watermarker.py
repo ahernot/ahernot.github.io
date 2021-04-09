@@ -8,7 +8,7 @@ rename watermarker.py to image.py
 """
 
 
-class Image:
+class WebsiteImage:
 
     def __init__(self, path: str):
         #
