@@ -50,8 +50,8 @@ def run(path: str):
                     #####
 
                     # Read exif data and save json in destination path
-                    with ExifDict(media_file.exif) as exif:
-                        exif.save(dirpath=dest_path)
+                    exif = ExifDict( media_file.exif )
+                    exif.save(dirpath=dest_path)
 
                     # Log file as processed
                     logger.log_processed(album.name, media_file.name)
