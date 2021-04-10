@@ -7,7 +7,6 @@ SIZES = [
     (2.5, 2000)  # aspect ratio ≥2.5  =>  size = 2000px
 ]
 SIZES_FD = FloorDict( SIZES )
-# TODO: add 3 size variants: (400, 800, 1200) and (600, 1200, 2000) for small/medium/large
 
 WATERMARKS = [
     (0.1, 0.0, 1.0, 0.3),  # bottom left
