@@ -9,18 +9,20 @@ rename watermarker.py to image.py
 """
 
 
+# CHECK EXIF FOR ROTATION!!!!!!
 class WebsiteImage:
 
     def __init__(self, path: str):
         self.image = imread_rgba(path)
         self.height, self.width, self.depth = (self.image).shape
         self.ratio = self.width / self.height
-        # CHECK EXIF FOR ROTATION!!!!!!
+
+        self.__resize()
 
     def __round(self, i):
         return round(i)
 
-    def resize(self):
+    def __resize(self):
         new_size = preferences.SIZES_FD [self.ratio]
 
         if self.ratio >= 1.0:  # apply to width
@@ -47,8 +49,22 @@ class ImageLayered:
         self.ratio = self.width / self.height
         self.area = self.width * self.height
 
+        self.__ext = '.png'
+
+        self.__calc_sizes()  # Calculate smaller sizes
+
     def __round(self, i):
         return round(i)
+
+    def __calc_sizes(self):
+
+        width_med = self.__round( self.width * preferences.SIZE_FACTOR_MED )
+        height_med = self.__round( self.height * preferences.SIZE_FACTOR_MED )
+        self.__size_med = (width_med, height_med)
+
+        width_low = self.__round( self.width * preferences.SIZE_FACTOR_LOW )
+        height_low = self.__round( self.height * preferences.SIZE_FACTOR_LOW )
+        self.__size_low = (width_low, height_low)
 
     def add_watermark(self, watermark: np.ndarray, size: float,  x_position: float, y_position: float, opacity: float):
         # create a watermark layer, and a mask layer based on self.__original
@@ -163,19 +179,39 @@ class ImageLayered:
         self.__image = (layer_transp + image_transp) .astype(np.uint8)
 
     def export(self, dirpath):
-        # TODO: EXIF WATERMARK
 
-        # Generate directories
-        generate_dirs(dirpath)
+        # Save image (high)
+        impath_high = dirpath + 'image-high' + self.__ext
+        cv2.imwrite(impath_high, self.__image)
 
-        # Save image
-        cv2.imwrite(dirpath + 'img@100.png', self.__image)
-        # save 60% and 30% size versions too!!!!!!
+        print(self.__size_low, self.__size_med)
+
+        # Save image (med)
+        impath_med = dirpath + 'image-med' + self.__ext
+        image_med = cv2.resize(self.__image, self.__size_med, interpolation=cv2.INTER_AREA)
+        cv2.imwrite(impath_med, image_med)
+
+        # Save image (low)
+        impath_low = dirpath + 'image-low' + self.__ext
+        image_low = cv2.resize(self.__image, self.__size_low, interpolation=cv2.INTER_AREA)
+        cv2.imwrite(impath_low, image_low)
         
         # Export all masks
-        for mask_id, mask in enumerate(self.__masks):
-            cv2.imwrite(dirpath + f'mask{mask_id}.png', mask)
-            # save 60% and 30% size versions too!!!!!!
+        for mask_id, mask_high in enumerate(self.__masks):
+
+            # Save mask (high)
+            mpath_high = dirpath + f'mask-high-{mask_id + 1}' + self.__ext
+            cv2.imwrite(mpath_high, mask_high)
+
+            # Save mask (med)
+            mpath_high = dirpath + f'mask-med-{mask_id + 1}' + self.__ext
+            mask_med = cv2.resize(mask_high, self.__size_med, interpolation=cv2.INTER_AREA)
+            cv2.imwrite(mpath_high, mask_med)
+
+            # Save mask (low)
+            mpath_high = dirpath + f'mask-low-{mask_id + 1}' + self.__ext
+            mask_low = cv2.resize(mask_high, self.__size_low, interpolation=cv2.INTER_AREA)
+            cv2.imwrite(mpath_high, mask_low)
 
 
 
