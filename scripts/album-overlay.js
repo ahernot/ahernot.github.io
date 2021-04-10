@@ -1,13 +1,11 @@
+document.addEventListener("finished-loading", function(e) {
+   console.log("finished loading");
 
 let imageContainers = document.getElementsByClassName("image-container");
+console.log(imageContainers);
 
-// Always actualise:
-// document.addEventListener("finished-loading", function(e) {
-//     let imageContainers = document.getElementsByClassName("image-container");
-//     console.log('finished loading');
-//     console.log(imageContainers);
-//     console.log(imageContainers.length);
-// });
+// ISSUE: https://www.javaer101.com/en/article/13252517.html
+// https://www.codegrepper.com/code-examples/javascript/how+to+make+script+wait+until+function+is+finished+javascript
 
 for (var i = 0; i < imageContainers.length; i++) {
 
@@ -43,3 +41,4 @@ for (var i = 0; i < imageContainers.length; i++) {
     // });
     
 };
+});

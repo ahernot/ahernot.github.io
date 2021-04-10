@@ -39,76 +39,81 @@ function loadImage (imageDir) {
     let maskPath3 = imageDir + 'mask-' + imageSize + '-3.png';
     let jsonPath = imageDir + 'info.json';
 
+
     // Read JSON
-    readTextFile(jsonPath, function(text) {
+    
+    let x = readTextFile(jsonPath, function(text) {
         let dataDict = JSON.parse(text);
-    });
-    
-    let dataDict = {'location': 'xx'}; // fix
+        // console.log(dataDict);
 
-    var elem = `<div class="content-container" id="image-1-1">
-    <div class="image-container w2-h3">
-        <img src="${imagePath}" alt=""></img>
-        <div class="image-overlay" style="background-image: url('${maskPath1}'); background-size: cover;"></div>
-        <div class="image-overlay" style="background-image: url('${maskPath2}'); background-size: cover;"></div>
-        <div class="image-overlay" style="background-image: url('${maskPath3}'); background-size: cover;"></div>
-    
-    
-        <div class="info-overlay">
-            <div class="info-header">${dataDict['location']}</div>
-            <div class="info-date">Date</div>
-    
-            <div class="info-camera">
-                <div class="setting-icon-container">
-                    <img src="../../resources/icons/icon-camera.svg" class="info-icon"></img>
+
+        var elem = `<div class="content-container" id="image-1-1">
+        <div class="image-container w2-h3">
+            <img src="${imagePath}" alt=""></img>
+            <div class="image-overlay" style="background-image: url('${maskPath1}'); background-size: cover;"></div>
+            <div class="image-overlay" style="background-image: url('${maskPath2}'); background-size: cover;"></div>
+            <div class="image-overlay" style="background-image: url('${maskPath3}'); background-size: cover;"></div>
+        
+        
+            <div class="info-overlay">
+                <div class="info-header">${dataDict['location']}</div>
+                <div class="info-date">Date</div>
+        
+                <div class="info-camera">
+                    <div class="setting-icon-container">
+                        <img src="../../resources/icons/icon-camera.svg" class="info-icon"></img>
+                    </div>
+                    <div class="val">Camera</div>
                 </div>
-                <div class="val">Camera</div>
+        
+                <ul class="info-settings">
+                    <li>
+                        <div class="setting-icon-container">
+                            <img src="../../resources/icons/icon-iso-black.png" class="info-icon" alt="ISO">
+                        </div>
+                        <div class="val">0</div>
+                    </li>
+                    <li>
+                        <div class="setting-icon-container">
+                            <img src="../../resources/icons/icon-shutterspeed-black.png" class="info-icon" alt="Shutter Speed">
+                        </div>
+                        <div class="val">0</div>
+                    </li>
+                    <li>
+                        <div class="setting-icon-container">
+                            <img src="../../resources/icons/icon-aperture-black.png" class="info-icon" alt="Aperture">
+                        </div>
+                        <div class="val">f/0</div>
+                    </li>
+                </ul>
             </div>
-    
-            <ul class="info-settings">
-                <li>
-                    <div class="setting-icon-container">
-                        <img src="../../resources/icons/icon-iso-black.png" class="info-icon" alt="ISO">
-                    </div>
-                    <div class="val">0</div>
-                </li>
-                <li>
-                    <div class="setting-icon-container">
-                        <img src="../../resources/icons/icon-shutterspeed-black.png" class="info-icon" alt="Shutter Speed">
-                    </div>
-                    <div class="val">0</div>
-                </li>
-                <li>
-                    <div class="setting-icon-container">
-                        <img src="../../resources/icons/icon-aperture-black.png" class="info-icon" alt="Aperture">
-                    </div>
-                    <div class="val">f/0</div>
-                </li>
-            </ul>
+        
         </div>
-    
-    </div>
-    </div>
-    `;
+        </div>
+        `;
 
-    // Add element
-    col1.innerHTML += elem;
+        // Add element
+        col1.innerHTML += elem;
 
-
+    });
 
 };
 
 
-let imageDir = '../../resources/albums/_tests/_sampleAlbum/2019-08-02_montmartre-batignolles_original/'
-    loadImage(imageDir);
+// let imageDir = '../../resources/albums/_tests/_sampleAlbum/2019-08-02_montmartre-batignolles_original/'
+//     loadImage(imageDir);
 
 
 // Run script
-// window.addEventListener('DOMContentLoaded', (event) => {
-//     let imageDir = '../../resources/albums/_tests/_sampleAlbum/2019-08-02_montmartre-batignolles_original/'
-//     loadImage(imageDir);
+window.addEventListener('DOMContentLoaded', (event) => {
+    let imageDir = '../../resources/albums/_tests/_sampleAlbum/2019-08-02_montmartre-batignolles_original/'
+    loadImage(imageDir);
+    loadImage(imageDir);
+    loadImage(imageDir);
 
-//     // Trigger finished-loading event
-//     var ev = new CustomEvent("finished-loading", { "detail": "Example of an event" });
-//     document.dispatchEvent(ev);
-// });
+    // Trigger finished-loading event
+    var ev = new CustomEvent("finished-loading", { "detail": "Example of an event" });
+    document.dispatchEvent(ev);
+
+
+});
