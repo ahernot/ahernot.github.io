@@ -1,9 +1,8 @@
 {
-    "fileName": "",
+    "fileNameOriginal": "myFile",
     "fileSize": "",
     "filePathOriginal": "",
     "author": "Anatole Hernot",
-    "dateFormatted": "",
     "location": "Unknown Location",
     "fileSizeOriginal": 9295831,
     "dateTimeOriginal": "2020:02:21 23:26:40",
@@ -14,6 +13,11 @@
     "settingFocalLength": 15,
     "imageWidthOriginal": 6000,
     "imageHeightOriginal": 4000,
+    "dateFormatted": "",
     "settingShutterSpeedSeconds": "15",
+    "aspectRatio": [
+        3,
+        2
+    ],
     "megapixelsOriginal": 24.0
 }
