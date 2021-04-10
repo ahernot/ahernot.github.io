@@ -169,11 +169,13 @@ class ImageLayered:
         generate_dirs(dirpath)
 
         # Save image
-        cv2.imwrite(dirpath + 'img.png', self.__image)
+        cv2.imwrite(dirpath + 'img@100.png', self.__image)
+        # save 60% and 30% size versions too!!!!!!
         
         # Export all masks
         for mask_id, mask in enumerate(self.__masks):
             cv2.imwrite(dirpath + f'mask{mask_id}.png', mask)
+            # save 60% and 30% size versions too!!!!!!
 
 
 
