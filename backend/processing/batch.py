@@ -40,30 +40,31 @@ def run(path: str):
                         continue
 
                     # Check if already processed
-                    if logger.is_processed(album.name, media_file.name):
+                    if logger.is_processed(album.name, media_file.name_full):
                         continue
 
                     # Generate destination path
-                    dest_path = f'../../resources/albums/_tests/{album.name}/'
+                    dest_path = f'../../resources/albums/_tests/{album.name}/{media_file.name}/'
                     generate_dirs( dest_path )
 
                     # Resize image
                     img_r = WebsiteImage( media_file.path )
-                    #image_low, image_med, image_high
 
-                    # Watermark image and save all
+                    # Watermark image
                     img_w = ImageLayered( img_r.image )
-                    watermark = imread_rgba( '/Users/anatole/Downloads/watermarks/watermark-white.tiff' )
+                    watermark = imread_rgba( preferences.WATERMARK_PATH )
                     for watermark_info in preferences.WATERMARKS:
                         img_w.add_watermark(watermark, *watermark_info)
-                    img_w.export(dirpath=dest_path+'out/')
+                    
+                    # Export image and masks (in all sizes)
+                    img_w.export(dirpath=dest_path)
 
                     # Read exif data and save json in destination path
                     exif = ExifDict( media_file.exif )
                     exif.save(dirpath=dest_path)
 
                     # Log file as processed
-                    logger.log_processed(album.name, media_file.name)
+                    logger.log_processed(album.name, media_file.name_full)
 
     # Write log
     logger.save()
