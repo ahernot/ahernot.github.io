@@ -49,7 +49,7 @@ def run(path: str):
 
                     # Resize image
                     img_r = WebsiteImage( media_file.path )
-                    img_r.resize()
+                    #image_low, image_med, image_high
 
                     # Watermark image and save all
                     img_w = ImageLayered( img_r.image )
