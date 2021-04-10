@@ -15,7 +15,7 @@
 * fix image info container borders on mobile (make overflow all around)
 * when click back on mobile, hide again. and hide with animation too
 
-* build backend controlling image loading
+* build backend controlling image loading => add a "more images" button and always preserve order from a JSON file
 * load images in different default sizes for different screen sizes
 
 # Changelog
