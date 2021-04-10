@@ -7,9 +7,10 @@ class MediaFile:
 
     def __init__(self, dirEntry: posix.DirEntry):
 
-        self.name = dirEntry.name
         self.path = dirEntry.path
-        self.extension = os.path.splitext(self.path) [1] [1:]
+        self.name_full = dirEntry.name
+        self.name = os.path.splitext(self.name_full) [0]
+        self.extension = os.path.splitext(self.name_full) [1] [1:]
         self.exif = self.__get_exif()
 
     def __get_exif(self):
