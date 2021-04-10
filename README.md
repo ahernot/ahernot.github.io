@@ -16,7 +16,7 @@
 * when click back on mobile, hide again. and hide with animation too
 
 * build backend controlling image loading
-
+* load images in different default sizes for different screen sizes
 
 # Changelog
 * v2.0 – Removed Bootstrap elements
