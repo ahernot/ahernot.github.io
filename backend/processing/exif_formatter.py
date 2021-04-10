@@ -93,6 +93,6 @@ class ExifDict:
         self.data = generate_image_dictionary(metadata)
 
     def save(self, dirpath: str):
-        json_name = os.path.splitext( self.data['fileNameOriginal']  ) [0] + '.json'
-        with open(dirpath + json_name, 'w', encoding='utf-8') as dump:
+        json_path = dirpath + 'image.json'
+        with open(json_path, 'w', encoding='utf-8') as dump:
             json.dump(self.data, dump, indent=4)
