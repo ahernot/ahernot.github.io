@@ -18,6 +18,8 @@
 * build backend controlling image loading => add a "more images" button and always preserve order from a JSON file
 * load images in different default sizes for different screen sizes
 * when click back on image on mobile, hide info pane
+* TODO: exif watermark on export method of ImageLayered
+* TODO: image rotation support in WebsiteImage
 
 # Issues
 * vertical images which got read incorrectly and have watermark horizontally bug out in album frames (will be fixed in backend)
