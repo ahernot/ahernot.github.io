@@ -1,5 +1,5 @@
-document.addEventListener("finished-loading", function(e) {
-   console.log("finished loading");
+// document.addEventListener("finished-loading", function(e) {
+//    console.log("finished loading");
 
 let imageContainers = document.getElementsByClassName("image-container");
 console.log(imageContainers);
@@ -41,4 +41,4 @@ for (var i = 0; i < imageContainers.length; i++) {
     // });
     
 };
-});
+// });
