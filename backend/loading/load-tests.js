@@ -100,6 +100,7 @@ function loadImage (imageDir) {
 };
 
 
+
 // let imageDir = '../../resources/albums/_tests/_sampleAlbum/2019-08-02_montmartre-batignolles_original/'
 //     loadImage(imageDir);
 
@@ -115,5 +116,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     var ev = new CustomEvent("finished-loading", { "detail": "Example of an event" });
     document.dispatchEvent(ev);
 
+    console.log("done");
+
+    // let footer = document.getElementById("footer");
+    // var script = `<script type="text/javascript" src="../../scripts/album-overlay.js" defer></script>`;
+    // footer.innerHTML += script;
 
 });
