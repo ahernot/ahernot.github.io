@@ -116,6 +116,13 @@ header {
     background-color: rgb(255, 240, 173);
     /* border: 1px solid blue; */
 }
+    /* @media screen and (max-width: 990px) {
+        header {
+            height: 100vh;
+        }
+    } */
+
+
     .header-container {
         width: 90%;
         margin: auto;
